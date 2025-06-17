@@ -14,6 +14,9 @@ console.log(datingRange(20));
 console.log(datingRange(12));
 console.log(datingRange(40));
 
+
+
+//code wars monday 17/06/2025
 function padIt(str,n){
   //coding here
 //   var cha ="";
@@ -37,3 +40,27 @@ function padIt(str,n){
   
 }
 console.log(padIt("a",10));
+
+function pickIt(arr){
+  var odd=[],even=[];
+  for(let i=0; i<arr.length; i++){
+    if(arr[i]%2){
+      odd.push(arr[i]);
+    }else{
+      even.push(arr[i]);
+    }
+  }
+  return [odd,even];
+}
+
+// def grabDoll(dolls):
+//     bag = []
+//     for doll in dolls:
+//         if doll == "Hello Kitty" or doll == "Barbie doll":
+//             bag.append(doll)
+//             if len(bag) == 3:
+//                 break
+//         else:
+//             continue
+//     return bag
+
