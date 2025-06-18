@@ -64,3 +64,16 @@ function pickIt(arr){
 //             continue
 //     return bag
 
+
+
+function combat(health, damage) {
+  // Write your code here
+  var new_health;
+  
+  if (health < 0){
+    return "Health cannot go below 0";
+  }
+  else 
+    return new_health = health - damage;
+}
+console.log(combat(-20,10));

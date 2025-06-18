@@ -118,3 +118,37 @@ for ( row = 0 ; row<=25; row++){
     }
     
 }
+
+function isPrime(integer){
+    for(var x=2 ; x < integer ; x++){
+        if(integer%x===0){
+        console.log(integer + " is divisible by "+x );
+        return false;
+        }}
+    return true;
+}
+console.log(isPrime(21));
+
+// function isThisWorking(input) {
+//   console.log("Printing: isThisWorking was called and " + input + " was passed in as an argument.");
+//   return "Returning: I am returning this string!";
+// }
+
+// console.log(isThisWorking(3));
+
+function isThisWorking(input) {
+  console.log("Printing: isThisWorking was called and " + input + " was passed in as an argument.");
+}
+
+console.log(isThisWorking(3));
+
+function combat(health, damage) {
+  // Write your code here
+  var new_health;
+  
+  if (health < 0){
+    return "Health cannot go below 0";
+  }
+  else 
+    return new_health = health - damage;
+}
