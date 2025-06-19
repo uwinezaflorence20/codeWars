@@ -152,3 +152,107 @@ function combat(health, damage) {
   else 
     return new_health = health - damage;
 }
+
+
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+console.log(makeLine(10));
+
+function buildTriangle(length) {
+    
+function makeLine(length) {
+    var line = "";
+    for (var j = 1; j <= length; j++) {
+        line += "* ";
+    }
+    return line + "\n";
+}
+console.log(makeLine(10));
+    // Let's build a huge string equivalent to the triangle
+    var triangle = "";
+    
+    //Let's start from the topmost line
+    var lineNumber = 1;
+    
+    for(lineNumber=1; lineNumber<=length; lineNumber++){
+        // We will not print one line at a time.
+        // Rather, we will make a huge string that will comprise the whole triangle
+        triangle = triangle + makeLine(lineNumber);
+    }
+    return triangle;
+}
+console.log(buildTriangle(10));
+
+
+// function expression catSays
+var catSays = function(max) {
+  var catMessage = "";
+  for (var i = 0; i < max; i++) {
+    catMessage += "meow ";
+  }
+  return catMessage;
+};
+
+// function declaration helloCat accepting a callback
+function helloCat(callbackFunc) {
+  return "Hello " + callbackFunc(3);
+}
+
+
+console.log(helloCat(catSays));
+
+
+
+
+var favoriteMovie = function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+};
+
+function movies(messageFunction, name) {
+  messageFunction(name);
+}
+
+movies(function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+}, "Finding Nemo");
+
+// inline function
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+emotions ("happy", function(num) {
+    var sound = ""; 
+    for (var i = 0 ; i < num ; i++) {
+        sound = sound + "ha" ;  
+    }
+    sound = sound +"!"; 
+    return sound; 
+});
+
+
+function multi(arr) {
+  var product = 0;
+  for(var i = 0 ;i<arr.length; i++){
+  product = product *arr[i];
+  }
+  return product;
+}
+function add(arr) {
+   var sum = 0;
+  for(var i = 0 ;i<arr.length; i++){
+    sum = sum + arr[i];
+  }
+  return sum;
+}
+
+function reverse(str) {
+  return str.split('').reverse().join('');
+}
+
+let arr=[10,3,4];
+console.log(multi(arr));
