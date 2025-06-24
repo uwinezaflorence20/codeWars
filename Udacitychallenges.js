@@ -244,7 +244,7 @@ function multi(arr) {
 }
 function add(arr) {
    var sum = 0;
-  for(var i = 0 ;i<arr.length; i++){
+  for(var i = 0 ;i<arr.length; i++){git 
     sum = sum + arr[i];
   }
   return sum;
@@ -256,3 +256,66 @@ function reverse(str) {
 
 let arr=[10,3,4];
 console.log(multi(arr));
+
+var donuts = ["glazed", "chocolate frosted", "Boston creme", "glazed cruller", "cinnamon sugar", "sprinkled"];
+donuts.push("powdered");
+console.log(donuts.push("powdered"));
+
+
+/*
+ * Programming Quiz: Quidditch Cup (6-5)
+ */
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a function `hasEnoughPlayers()`
+ * - Your function `hasEnoughPlayers()` should accept one parameter
+ * - Your function `hasEnoughPlayers()` should return the expected output - a Boolean value - true or false
+ * - Return true if the array size is atleast 7, otherwise false. 
+ */
+ 
+// your code goes here
+
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+
+function hasEnoughPlayers(team){
+    if(team.length>=7){
+        return true;
+    }
+    else{
+      return false  
+    } 
+}
+console.log(hasEnoughPlayers(team));
+
+
+/*
+ * Programming Quiz: Joining the Crew (6-6)
+ */
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `crew`
+ * - Your `crew` array should contain the Serenity\'s original crew and the three new crew members
+ * - Your code should use the `push()` method to add new members to the `crew` array
+ * - Print the array on the console at the end
+ */
+
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+crew.push(doctor);
+crew.push(sister);
+crew.push(shepherd);
+console.log(crew);
+
+// your code goes here
