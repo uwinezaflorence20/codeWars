@@ -319,3 +319,34 @@ crew.push(shepherd);
 console.log(crew);
 
 // your code goes here
+
+
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+    19, 300, 3775, 299, 36, 209, 148, 169, 299,
+    6, 109, 20, 58, 139, 59, 3, 1, 139
+];
+
+
+test.forEach(function(item, index){
+    if(item%3===0){
+
+        test[index]=test[index]+100;
+    }
+    
+});
+console.log(test);
+
+
+
+var bills = [50.23, 19.12, 34.01,
+    100.11, 12.15, 9.90, 29.11, 12.99,
+    10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+ var totals = bills.map(function (bill){
+
+     bill *=1.15;
+     return Number(bill.toFixed(2));
+ })
+
+console.log(totals);
