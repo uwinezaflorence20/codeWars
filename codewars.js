@@ -77,3 +77,57 @@ function combat(health, damage) {
     return new_health = health - damage;
 }
 console.log(combat(-20,10));
+
+function removeChar(str){
+ //You got this!
+  
+  if (str.length === 2){
+    return ""
+  }
+  else{
+    return str.substring(1,str.length - 1)
+  }
+
+};
+
+function integrate(coefficient, exponent) {
+  if(coefficient>=0 && exponent>=0){
+    return " coefficient and exponent should be positive"
+  }
+  else 
+    return coefficient * ((("x")^(coefficient+exponent))/(coefficient+exponent));
+  
+}
+
+
+function integrate(coefficient, exponent) {
+  if(coefficient<=0 && exponent<=0){
+    return " coefficient and exponent should be positive"
+  }
+  else {
+    let newexponent = exponent +1;
+    let newcoefficient = coefficient / newexponent;
+    return newcoefficient + "x"+"^"+ newexponent;
+  }
+  
+}
+
+
+
+function countPositivesSumNegatives(input) {
+  if (!Array.isArray(input) || input.length === 0) {
+    return [];
+  }
+  
+  let sum =0;
+  let count =0;
+  for(let i = 0 ; i < input.length ; i++){
+    if(input[i] >0){
+    count++;
+    }
+    else{
+       sum = sum + input[i];
+    }
+  }
+  return [count , sum];
+}

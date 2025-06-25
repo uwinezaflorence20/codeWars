@@ -350,3 +350,89 @@ var bills = [50.23, 19.12, 34.01,
  })
 
 console.log(totals);
+
+// arrow functions
+const hello =()=>console.log("hello people");
+hello();
+
+const helloparam =(name)=>console.log(`hello ${name}`);
+helloparam("florence");
+
+let arr3 = ["a", "b", "c", "d"];
+arr3.reverse();
+console.log(arr3);
+
+let arr4 = ["a", "b"];
+let newArr4 = arr4.concat(["c", "d"]);
+console.log(newArr4);
+
+
+
+
+//OBJECT IN JAVASCRIPT
+var umbrella = {
+    color: "pink",
+    isOpen: true,
+    open: function() {
+        if (umbrella.isOpen === true) {
+            return "The umbrella is already opened!";
+        } else {
+            umbrella.isOpen = true;
+            return "Julia opens the umbrella!";
+        }
+    },
+    
+    close: function(){
+        if(umbrella.isOpen === false){
+            return "The umbrella is already closed";
+        }
+        else {
+            umbrella.isOpen = false;
+            return "Julia closes the umbrella!";
+        }
+    },
+    // your code goes here
+};
+
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    printAccountSummary: function (){
+        return "Welcome!\nYour balance is currently $" + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent + "%.";
+    }
+    
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+
+var facebookProfile = {
+    name: "Udacian",
+    friends: 25,
+    messages: ["Message 1", "Message 2", "Message 3", "Message 4"],
+    postMessage: function(message){
+        facebookProfile.messages.push(message);
+    },
+    deleteMessage: function(index){
+
+        facebookProfile.messages.splice(index, 1);
+    },
+    addFriend: function(){
+        facebookProfile.friends = facebookProfile.friends + 1;
+    },
+    removeFriend: function(){
+        if(facebookProfile.friends>0)
+            facebookProfile.friends = facebookProfile.friends - 1;
+    }
+};
