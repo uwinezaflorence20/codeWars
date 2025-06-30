@@ -394,6 +394,10 @@ var umbrella = {
     // your code goes here
 };
 
+for( let key in umbrella){
+    console.log(key);
+    console.log(umbrella[key]);
+}
 var savingsAccount = {
     balance: 1000,
     interestRatePercent: 1,

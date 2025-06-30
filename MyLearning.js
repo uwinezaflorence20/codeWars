@@ -11,5 +11,5 @@ let answer2 = arr.filter(x => x<4);
 console.log(answer2);
 
 
-let red = arr.reduce((a,b) => a+b);
+let red = arr.reduce((a,b) => a+b,0);
 console.log(red);
