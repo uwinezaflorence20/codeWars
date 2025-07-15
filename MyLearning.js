@@ -13,3 +13,9 @@ console.log(answer2);
 
 let red = arr.reduce((a,b) => a+b,0);
 console.log(red);
+//event listeners
+const mainHeading = document.querySelector('h1');
+
+mainHeading.addEventListener('click', function () {
+  console.log('The heading was clicked!');
+});
