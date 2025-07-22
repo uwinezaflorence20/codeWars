@@ -40,3 +40,4 @@ for (let i = 0; i < 200; i++) {
 document.body.appendChild(fragment); 
 const eT= performance.now();
 console.log('This code took ' + (eT - sT) + ' milliseconds.');
+
