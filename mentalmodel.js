@@ -1,17 +1,17 @@
-//question1
-function multiply(a,b){
-    if(a !== null && b !== null){
-        return a*b;
-    }
-    else if ((a||b) === null){
-        return a*a ;
-    }
-    else{
-        return a.map(x=> x *x);
-    }
+//question1function multiply(a, b) {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a * b;
+  } else if (typeof a === 'number' && b === undefined) {
+    return a * a;
+  } else if (Array.isArray(a)) {
+    return a.map(x => x * x);
+  } else {
+    return "Invalid input";
+  }
 
-}
-console.log(multiply(3,5));
+
+console.log(multiply(3)); // Output: 9
+
 
 // second question
 
@@ -27,5 +27,5 @@ console.log(capitalizedOdd("uwineza"));
 console.log(capitalizedOdd("javascript"));
 
 
-
+// question with chatgpt and revision
   
