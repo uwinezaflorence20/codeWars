@@ -390,6 +390,49 @@ console.log(stud);
 let names = students.map(students=>students.name.toUpperCase());
 console.log(names);
 
+(function() {
+  console.log("Runs instantly");
+})();
+
+// remove duplicate from array
+let arr = [1,2,2,3,4,55,4];
+let remove = [... new Set(arr)];
+console.log(remove);
+
+
+
+
+
+
+
+function multiply(a,b){
+  if(typeof a === "number" && typeof b === "number"){
+    return a*b;
+  }
+  else if (typeof a  === "number" && typeof b === "undefined"){
+    return a*a;
+  }
+  else if(Array.isArray(a)){
+    return a.map(a=>a*a);
+  }
+ 
+}
+console.log(multiply([1,2,3,4,5,6,7]));
+
+
+function capitalizeOdd(str){
+  result =[];
+  for(let i =0; i<str.length; i++){
+    if(i%2 === 0){
+     result.push(str[i].toUpperCase());
+    }
+    else{
+      result.push(str[i]);
+    }
+  }
+  return result.join('');
+}
+console.log(capitalizeOdd("Javascript"));
 
 
 
