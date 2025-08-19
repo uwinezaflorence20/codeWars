@@ -71,3 +71,44 @@ function createAnimalTradingCardHTML(animal) {
 
 
 console.log(createAnimalTradingCardHTML(cheetah));
+
+
+
+let myArray=[1,2,3,4,5];
+let [a,b,c]= myArray;
+console.log(a,b,c);
+
+const gemstone = {
+  type: 'quartz',
+  color: 'rose',
+  carat: 21.29
+};
+
+const {type, color, carat} = gemstone;
+
+console.log(type, color, carat);
+
+const circle = {
+  radius: 10,
+  color: 'orange',
+  getArea: function() {
+    return Math.PI  *this.radius*  this.radius;
+  },
+  getCircumference: function() {
+    return 2  *Math.PI*  this.radius;
+  }
+};
+
+let {radius, getArea, getCircumference} = circle;
+console.log(radius, circle.getArea(),circle.getCircumference());
+
+const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
+
+const [one, , , two, , , , three] = things;
+
+const colors = `List of Colors
+1. ${one}
+2. ${two}
+3. ${three}`;
+
+console.log(colors);
