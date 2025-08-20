@@ -104,5 +104,57 @@ const produce = [...fruits1 ,...vegetables];
 
 console.log(produce);
 
+function sum() {
+  let total = 0;  
+  for(const argument of arguments) {
+    total += argument;
+  }
+  return total;
+}
+console.log(sum(1,2,3,5,6,7,8,8,8));
 
+
+function sum(...nums) {
+  let total = 0;  
+  for(const num of nums) {
+    total += num;
+  }
+  return total;
+}
+console.log(sum(1,3,4,4,5,6,6,6))
+
+
+function average(...num) {
+    if (num.length === 0) return 0; 
+
+    let total = 0;
+    for (let n of num) {
+        total += n; 
+    }
+
+    let avg = total / num.length; 
+    return avg;
+}
+
+// Test cases
+console.log(average(2, 6));               
+console.log(average(2, 3, 3, 5, 7, 10));    
+console.log(average(7, 1432, 12, 13, 100)); 
+console.log(average());                      
+
+
+// arrow function
+const names = ['Afghanistan', 'Aruba', 'Bahamas', 'Chile', 'Fiji', 'Gabon', 'Luxembourg', 'Nepal', 'Singapore', 'Uganda', 'Zimbabwe'];
+
+const longNames = names.filter(name => name.length >6
+ );
+ console.log(longNames.join());
+
+ const greet = name=>`hello ${name}`;
+console.log(greet("uwineza"));
+
+const squares = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(square => square * square
+);
+
+console.log(...squares);
 
