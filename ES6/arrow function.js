@@ -137,4 +137,146 @@ return `Florence's average score is ${average}`;
 console.log(average(1,2,3,4,5));
 
 
+// 1. let & const
+// Create a const array of 3 cities.
+// Try adding a city using .push() → should work.
+// Try reassigning the array → should fail.
+// Create a let variable count starting at 0 and increment it in a loop.
+
+const cities =["Rwanda","Arab","England"];
+console.log(cities);
+console.log(cities.push("Egypt"));
+console.log(cities);
+
+
+for(let count =0 ; count<=10 ; count++){
+  console.log(count);
+}
+
+// 2. Template Literals
+
+// Create variables firstName and lastName.
+
+let firstName ="UWINEZA";
+let lastName ="Florence";
+console.log(`Hello, My name is ${firstName} ${lastName} and I am learning Javascript.`)
+
+// 3. Destructuring
+// Create an array of 5 numbers.
+// Destructure the first two numbers into a and b, and the rest into another array.
+// Create an object for a book {title, author, year}. Destructure title and year into variables.
+
+let array = [10,59,43,5,64];
+let [a,b] =array;
+let [c,d,e] = array;
+console.log(a,b);
+console.log(c,d,e);
+
+
+const book ={
+ tittle :"My Life ",
+author :" Magnifique Munezero",
+year:"2025"
+}
+let {tittle,year} = book;
+console.log(`${tittle} , ${year}`);
+
+
+// Object Literal Shorthand
+// Create variables x, y, z and use them to create an object {x, y, z}.
+// Add a method sum() inside the object that returns x + y + z.
+
+let x=10;
+let y=20;
+let z=30;
+let number ={
+x,y,z,
+sum: function(){
+  return this.x +this.y+this.z;
+}
+}
+console.log(number.sum());
+
+
+// 5. for...of
+// Loop over an array of strings and print each with “I love <string>”.
+// Loop over a string "JavaScript" and print each character.
+
+let arr = ['God','People'];
+for(let ar of arr){
+  console.log( `I love ${ar}`);
+}
+
+let str ="JavaScript";
+for(let st of str){
+  console.log(st);
+}
+
+// 6. Spread Operator
+// Merge two arrays [1,2,3] and [4,5,6] into one array.
+// Copy an object {a:1, b:2} into a new object and add a new key c:3.
+
+let ar1=[1,2,3];
+let ar2=[4,5,6];
+let two =[...ar1,...ar2]
+console.log(two);
+
+let ob1={
+  a:1, 
+  b:2
+}
+let ob2={
+  c:3
+}
+
+let ob3 ={...ob1,...ob2};
+console.log(ob3);
+
+// 7. Rest Parameter
+// Write a function multiplyAll(...nums) that multiplies all numbers passed to it
+// Write a function joinStrings(separator, ...strings) that joins all strings with the given separator.
+
+function multiplyAll(...nums){
+  let products=1;
+  for(let i=0 ;i<nums.length ; i++){
+   products=products*nums[i];
+  }
+return products;
+}
+console.log(multiplyAll(1,2,3,4,5));
+
+// 8. Arrow Functions
+// Convert this function to an arrow function:
+// function square(n) {
+//   return n * n;
+// }
+// Create an arrow function that takes 2 numbers and returns their sum minus product.
+
+let arrow = n => n*n;
+console.log(arrow(10));
+
+let summation = (num1,num2) =>{
+  let sum = num1+num2;
+  let product = num1*num2;
+  return `${sum}`- `${product}`;
+}
+console.log(summation(1,2));
+
+// 9. this in Regular vs Arrow Function
+// Create an object counter with:
+// let counter = {
+//   count: 0,
+//   increment: function() { console.log(this.count); },
+//   arrowIncrement: () => { console.log(this.count); }
+// }
+// Call counter.increment() and counter.arrowIncrement()
+// Explain why they print different results.
+// 10. Combined Challenge
+// Create an object team with name, members (array of names), and scores (array of numbers).
+// Destructure name and members.
+// Print all member names using for...of.
+// Create a function averageScore(...scores) and print a template literal:
+// Team <name> has an average score of <averageScore>
+// If you want, I can also provide the full solutions for all of these exercises in one clean code file, so you can check your answers.
+// Do you want me to do that?
 
