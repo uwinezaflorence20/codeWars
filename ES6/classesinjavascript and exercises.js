@@ -93,3 +93,61 @@ dog.barks();
 
 
 //exercises 3
+
+
+class vehicle {
+    constructor(color = "white", wheels = 4){
+        this.color =color;
+        this.wheels = wheels;
+
+    }
+
+    drive(){
+        console.log(`Driving a ${this.color} vehicle with ${this.wheels} wheels`);
+    }
+}
+ 
+class Motorcycle extends vehicle {
+    constructor(color,wheels=2){
+        super(color,wheels);
+    }
+
+    wheelie(){
+        console.log(`Doing a wheelie!`);
+    }
+
+    //exercises 4
+    drive(){
+        super.drive();
+        console.log(`Riding a ${this.color} motorcycle with ${this.wheels} wheels!`);
+    }
+}
+
+let Motor = new Motorcycle();
+Motor.drive();
+Motor.wheelie();
+
+
+// Exercise 5 — Static Method
+
+// Add a static method Vehicle.info() that logs "Vehicles are means of transport".
+
+// Call it without creating an instance.
+
+// Verify you cannot call it from an instance (try new Vehicle().info() and explain what happens).
+
+// Exercise 6 — Advanced: Combining Everything
+
+// Create a Tree class:
+
+// Constructor: type = "Oak", height = 5
+
+// Method: grow() → increases height by 1
+
+// Subclass Pine extends Tree:
+
+// Defaults type to "Pine"
+
+// Override grow() → increases height by 2 instead of 1, then calls super.grow()
+
+// Create a Pine instance and log height after calling grow() twice.
