@@ -22,3 +22,12 @@ console.log(typeof bowl);
 console.log(bowl[symbols[0]]);
 console.log(bowl[symbols[2]]);
 
+
+const bananas = symbols.filter(sym => sym.description === "banana");
+
+bananas.forEach(bananaSym => {
+  console.log(bowl[bananaSym]);
+});
+
+
+
