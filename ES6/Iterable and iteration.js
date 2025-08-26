@@ -28,3 +28,41 @@ console.log(array.next());
 console.log(array.next());
 
 
+// exercises 1
+// Example usage:
+// const countdown = createCountdown(5);
+// for (let num of countdown) {
+//   console.log(num); // 5, 4, 3, 2, 1
+// }
+
+function createCountdown(start) {
+  return {
+    [Symbol.iterator]() {
+      let current = start;
+      return {
+        next() {
+          if (current > 0) {
+            return { value: current--, done: false };
+          } else {
+            return { done: true };
+          }
+        }
+      };
+    }
+  };
+}
+
+const countdown = createCountdown(5);
+for (let num of countdown) {
+  console.log(num);
+}
+
+
+
+
+
+
+
+
+
+
