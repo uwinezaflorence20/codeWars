@@ -105,6 +105,9 @@ class vehicle {
     drive(){
         console.log(`Driving a ${this.color} vehicle with ${this.wheels} wheels`);
     }
+      static Vehicleinfo(){
+      console.log("Vehicles are means of transport");
+    }
 }
  
 class Motorcycle extends vehicle {
@@ -121,20 +124,21 @@ class Motorcycle extends vehicle {
         super.drive();
         console.log(`Riding a ${this.color} motorcycle with ${this.wheels} wheels!`);
     }
+  
 }
 
 let Motor = new Motorcycle();
 Motor.drive();
 Motor.wheelie();
+vehicle.Vehicleinfo(); // calling a static method without having to create an object 
 
 
 // Exercise 5 — Static Method
-
 // Add a static method Vehicle.info() that logs "Vehicles are means of transport".
-
 // Call it without creating an instance.
-
 // Verify you cannot call it from an instance (try new Vehicle().info() and explain what happens).
+
+
 
 // Exercise 6 — Advanced: Combining Everything
 
