@@ -60,3 +60,60 @@ console.log(roster);
  uniqueFlavors.add(flavor1);
  console.log(uniqueFlavors.has(flavor1));
 
+// set and weak set exercises
+
+const ex = new Set([1, 2, 3, 3, 4, "Alice", "Bob", "Alice"]);
+console.log(ex)
+console.log(ex.size);
+console.log(ex.has(5))
+console.log(ex.delete("Alice"))
+for(let e of ex){
+    console.log(e);
+}
+let setArray =[...ex]
+console.log(setArray);
+const array = Array.from(ex);
+console.log(array)
+
+const myArray = [];
+
+for (let value of ex) {
+  myArray.push(value);
+}
+
+console.log(myArray); // [10, 20, 30]
+
+
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([3, 4, 5, 6]);
+
+// union
+const union = [...setA, ...setB]
+console.log(union);
+
+const intersection =new Set([...setA].filter(x=> setB.has(x)));
+console.log(intersection);
+
+const difference = new Set([...setA].filter(x=>!setB.has(x)));
+console.log(difference);
+
+
+
+// weaSet
+let ob1 ={name:"uwineza"};
+let ob2 = {name:"Florence"};
+const weakset = new WeakSet();
+weakset.add(ob1);
+weakset.add(ob2);
+console.log(weakset.has(ob1));
+weakset.delete(ob1);
+console.log(weakset.has(ob1));
+
+let ob3 ={name:"Fillete"};
+weakset.add(ob3);
+
+ob3=null;
+
+// the memory for the ob3 will be deleted because it is set to null.
+
+
