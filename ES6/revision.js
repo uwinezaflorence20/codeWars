@@ -37,3 +37,11 @@ const circle = {
 };
 
 let {radius, getArea, getCircumference} = circle;
+
+
+const fruits = ["apples", "bananas", "pears"];
+console.log(...fruits);
+
+const vegetables = ["corn", "potatoes", "carrots"];
+const produce = [...fruits, ...vegetables];
+console.log(produce);
