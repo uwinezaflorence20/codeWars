@@ -75,3 +75,80 @@ library.set(book2, false);
 library.set(book3, true);
 console.log(library);
 console.log(library.has(book1));
+
+
+// map exercises
+
+let map = new Map([["id1","Florence"], ["id2","Florence"]]);
+map.set("id3","Florence");
+map.set("id4","Fillette");
+console.log(map);
+console.log(map.get("id2"));
+console.log(map.has("id2"));
+console.log(map.delete("id2"));
+
+// for(let [key,value] of map){
+//     console.log(key,value)
+// }
+for(let el of map){
+    console.log(el)
+}
+
+let ke = map.keys();
+console.log(ke.next());
+console.log(ke.next());
+console.log(ke.next());
+console.log(ke.next());
+console.log(ke.next());
+
+let va = map.values();
+console.log(va.next());
+console.log(va.next());
+console.log(va.next());
+console.log(va.next());
+console.log(va.next());
+
+let en = map.entries();
+console.log(en.next());
+console.log(en.next());
+console.log(en.next());
+console.log(en.next());
+console.log(en.next());
+
+map.set('obj', {
+    firstName: 'Richard',
+    lastName: 'Kalehoff',
+    role: 'Content Developer'
+});
+
+console.log(map.size);
+
+
+// weakmap
+const weakmap = new WeakMap()
+
+
+// 4. WeakMap Exercises
+
+// 👉 A WeakMap uses objects as keys only and values can be anything. Keys are weakly referenced.
+
+// Exercises
+
+// Create a WeakMap and use objects as keys with values (like {name: "Alice"} → "student").
+
+// Try using a string as a key. What happens?
+
+// Retrieve a value from a WeakMap using .get().
+
+// Check if a key exists using .has().
+
+// Remove a key-value pair with .delete().
+
+// Show garbage collection behavior:
+
+// Create an object, add it as a key in a WeakMap.
+
+// Then set the object reference to null.
+
+// Explain what happens.
+
