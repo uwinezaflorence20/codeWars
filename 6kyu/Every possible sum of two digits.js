@@ -1,0 +1,12 @@
+function digits(num) {
+  const nums = String(num).split("").map(Number); 
+  const result = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      result.push(nums[i] + nums[j]); 
+    }
+  }
+
+  return result;
+}
