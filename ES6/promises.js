@@ -13,7 +13,7 @@ console.log(promise);
 
 // 
 
-let promise3 = new Promise(function(resolve, reject) {
+let promise3 = new Promise((resolve, reject)=> {
   // the function is executed automatically when the promise is constructed
 
   // after 1 second signal that the job is done with the result "done"
@@ -21,13 +21,13 @@ let promise3 = new Promise(function(resolve, reject) {
 });
 console.log(promise3)
 
-let promise4 = new Promise(function(resolve, reject) {
+let promise4 = new Promise((resolve, reject)=> {
   // after 1 second signal that the job is finished with an error
   setTimeout(() => reject(new Error("Whoops!")), 1000);
 });
 console.log(promise4)
 
-let promise5 = new Promise(function(resolve, reject) {
+let promise5 = new Promise((resolve, reject)=> {
   resolve("done");
 
   reject(new Error("…")); // ignored
@@ -36,14 +36,14 @@ let promise5 = new Promise(function(resolve, reject) {
 
 console.log(promise5)
 
-let promis = new Promise(function(resolve, reject) {
+let promis = new Promise((resolve, reject)=> {
   setTimeout(() => resolve("done!"), 1000);
 });
 
 // resolve runs the first function in .then
 promis.then(
-  result => alert(result), // shows "done!" after 1 second
-  error => alert(error) // doesn't run
+  result => console.log(result), // shows "done!" after 1 second
+  error => console.log(error) // doesn't run
 );
 console.log(promis);
 
@@ -69,7 +69,6 @@ let second = new Promise((resolve,reject)=>{
 second.then(result=>{
     console.log(result)
 });
-
 second.catch(error=>{
     console.log(error);
 })

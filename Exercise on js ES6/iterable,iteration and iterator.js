@@ -25,3 +25,35 @@ console.log(iterator.next()); // { value: undefined, done: true }
 // 3
 
 
+const nested = [[1, 2], [3, 4], [5, 6]];
+let array =[];
+for( let neste of nested){
+    for(nest of neste){
+        array.push(nest);
+    }
+}
+console.log(array)
+// 👉 Task: use for...of to create a new array [1, 2, 3, 4, 5, 6]
+
+// Use for...of to count how many vowels (a, e, i, o, u) appear in the string.
+
+const sentence = "I love learning JavaScript";
+let  vowels =['i','u','o','a','e'];
+let count=1;
+
+for(let char of sentence.toLowerCase()){
+    if(vowels.includes(char)){
+    count++;
+    };
+
+}
+console.log(count);
+
+
+const fruits = ["apples", "bananas", "pears"];
+const vegetables = ["corn", "potatoes", "carrots"];
+console.log([...fruits,...vegetables])
+
+
+const order = '20.17, 18.67, 1.50, "cheese", "eggs", "milk", "bread"';
+console.log([...order])
