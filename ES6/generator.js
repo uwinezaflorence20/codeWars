@@ -5,12 +5,14 @@ function* generate() {
     yield 2;
 }
 let gen = generate();
-let iter = gen.next();
-let iter2 = gen.next();
+console.log(gen.next())
+console.log(gen.next())
+// let iter = gen.next();
+// let iter2 = gen.next();
 
-console.log(iter)
-console.log(iter2)
-console.log(iter)
-console.log(iter)
-console.log(gen)
-console.log(gen)
+// console.log(iter)
+// console.log(iter2)
+// console.log(iter)
+// console.log(iter)
+// console.log(gen)
+// console.log(gen)
