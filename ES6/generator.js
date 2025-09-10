@@ -16,3 +16,17 @@ console.log(gen.next())
 // console.log(iter)
 // console.log(gen)
 // console.log(gen)
+
+
+let scores = [10,20,30];
+scores.message = 'Hi';
+
+console.log("for...in:");
+for (let score in scores) {
+  console.log(score); 
+}
+
+console.log('for...of:');
+for (let score of scores) {
+  console.log(score);
+}
