@@ -5,7 +5,7 @@ const products = [
   { name: undefined, price: 100 },           
   { name: "Monitor", price: undefined },     
   { name: null, price: 300 }                
-];
+]
 function convertNullableValues(arrayOfObjects) {
   return arrayOfObjects.map(obj => {
     const result = {};
