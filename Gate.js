@@ -27,3 +27,14 @@ const [first, second, ...rest] = numbers;
 console.log(first); //1
 console.log(second); //2
 console.log(rest); //[3,4,5]
+
+
+//rest parameter
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}
+function sum(...nums) {
+  console.log(nums);
+}
+
+console.log(sum(1,2,3,4,5,6,7,8,9,11,13,14,12));
