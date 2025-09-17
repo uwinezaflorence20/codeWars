@@ -67,11 +67,6 @@ for (let num of fibonacciGenerator(50)) {
   console.log(num);
 }
 
-
-
-
-
-
 let filterAndMap = (people) =>{
     let result =[];
     for (let {name,age} of people){
@@ -104,3 +99,27 @@ let nestedArray = (arr)=>{
 const nested = [1, [2, 3], 4, [2, [5, 1]], 3];
 const result = nestedArray(nested);
 console.log(result);
+
+
+function extractWordsAndNumbers(arr) {
+  const result = [];
+
+  for (const item of arr) {
+    const numbers = item.match(/\d+/g); 
+    const letters = item.match(/\D+/g);
+    if (letters) {
+      result.push(...letters.map(l => l)); 
+    }
+    if (numbers) {
+      result.push(...numbers.map(n => Number(n)));
+    }
+  }
+
+  return result;
+}
+
+// Example usage
+const input = ["Hello123", "World456", "49", "Another789"];
+const output = extractWordsAndNumbers(input);
+console.log(output); 
+// Output: [ "Hello", 123, "World", 456, 49, "Another", 789 ]
