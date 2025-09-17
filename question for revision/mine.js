@@ -67,3 +67,40 @@ for (let num of fibonacciGenerator(50)) {
   console.log(num);
 }
 
+
+
+
+
+
+let filterAndMap = (people) =>{
+    let result =[];
+    for (let {name,age} of people){
+    if(age > 18){
+        result.push(name);
+    }
+    }
+    return result;
+
+}
+const people = [
+  { name: 'Alice', age: 16 },
+  { name: 'Bob', age: 22 },
+  { name: 'Charlie', age: 17 },
+  { name: 'David', age: 25 },
+];
+
+const adults = filterAndMap(people);
+console.log(adults); // Output: ['BOB', 'DAVID']
+
+
+
+
+let nestedArray = (arr)=>{ 
+    let ar = arr.flat(Infinity);
+    let a = [...new Set(ar)];
+    return a.sort((a,b) => a+b).join(',');
+
+}
+const nested = [1, [2, 3], 4, [2, [5, 1]], 3];
+const result = nestedArray(nested);
+console.log(result);
