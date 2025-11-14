@@ -45,3 +45,16 @@ setTimeout(usingSTO,3000);
 // Keep the line below as the last line of code:
 console.log("This is the last line of code in app.js.");
 
+
+const prom = new Promise((resolve, reject) => {
+  resolve('Yay!');
+});
+
+const handleSuccess = (resolvedValue) => {
+  console.log(resolvedValue);
+};
+
+prom.then(handleSuccess);
+
+
+
