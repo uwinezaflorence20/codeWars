@@ -1,7 +1,7 @@
 Promise.resolve("Start")
   .then(val => {
     console.log(val);
-    throw "Error in chain!";
+    // throw "Error in chain!";
   })
   .then(val =>{
      console.log("This won't run")
