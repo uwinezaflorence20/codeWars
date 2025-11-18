@@ -24,6 +24,26 @@ withConstructor(0)
 });
 
 // Write your code below:
+let myPromise = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Yay, I resolved!')
+    }, 1000);
+  });
+}
+
+async function noAwait() {
+ let value = myPromise();
+ console.log(value);
+}
+
+async function yesAwait() {
+ let value = await myPromise();
+ console.log(value);
+}
+
+noAwait(); // Prints: Promise { <pending> }
+yesAwait(); // Prints: Yay, I resolved!
 
 
 
@@ -41,3 +61,12 @@ withAsync(100)
   console.log(` withAsync(100) returned a promise which resolved to: ${resolveValue}.`);
 })
 */
+
+
+async function asyncAwaitVersion() {
+  let firstValue = await returnsFirstPromise();
+  console.log(firstValue);
+  let secondValue = await returnsSecondPromise(firstValue);
+  console.log(secondValue);
+}
+
