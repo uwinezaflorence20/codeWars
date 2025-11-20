@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Launch Status</title>
+</head>
+
+<body>
+    <h1>Launch Status</h1>
+    <h3>Weather Conditions</h3>
+    <div id="weather-conditions">
+
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            fetch("https://handlers.education.launchcode.org/static/weather.json").then(function (response) {
+                // Access the JSON in the response
+                response.json().then(function (json) {
+                    console.log(json);
+                    const div = document.getElementById("weather-conditions");
+                    div.innerHTML = `
+                <ul>
+                     <li>Temp ${json.temp}</li>
+                     <li>WindSpeed ${json.windSpeed}</li>
+                     <li>tempMin ${json.tempMin}</li>
+                     <li>tempMax ${json.tempMax}</li>
+                     <li>Status ${json.status}</li>
+                     <li>Chance of Precip ${json.chanceOfPrecipitation}</li>
+                     </ul>
+                     `;
+               });
+            });
+         });
+
+         // another fetch
+         let url ="https://api.github.com/users/uwinezaflorence20/repos";
+         async function name() {
+            let fe = await fetch(url);
+            let co =await fe.json();
+            console.log(co)
+         }
+         name();
+         //emoji fetching from github
+         let urlEmoji ="https://api.github.com/emojis"
+         async function name2() {
+            let em = await fetch(urlEmoji);
+            let da = await em.json();
+            console.log(da);
+         }
+         name2();
+
+    </script>
+</body>
+
+</html>
