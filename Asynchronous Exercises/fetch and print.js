@@ -92,4 +92,67 @@ async function names() {
 names();
 
 
+//Mix aync/await and try/catch
+async function getUser(id) {
+    try {
+        let user = await fetch('https://jsonplaceholder.typicode.com/users/99999999');
+        if(!user.ok){
+            throw new Error("HTTPS error!");
+        }
+        let re = await user.json();
+        console.log(re);
+
+    } catch (e) {
+        console.log('"Could not load user!"')
+    }
+}
+getUser(2);
+
+
+
+//question 7
+fetch('https://jsonplaceholder.typicode.com/users/1')
+.then((res)=>{
+return res.json();
+})
+.then((user1)=>{
+    console.log("user:",user1);
+    return fetch('https://jsonplaceholder.typicode.com/posts?userId=1')
+})
+.then((res2)=>{
+return res2.json();
+})
+.then((post)=>{
+console.log("The post",post);
+return fetch('https://jsonplaceholder.typicode.com/comments?postId=<id>');
+})
+.then((res3)=>{
+    return res3.json();
+})
+.then((user3)=>{
+    console.log(user3);
+})
+
+
 //
+fetch('https://jsonplaceholder.typicode.com/users/1')
+  .then((res) => res.json())
+  .then((user1) => {
+      console.log("User:", user1);
+      return fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
+  })
+  .then((res2) => res2.json())
+  .then((posts) => {
+      console.log("Posts:", posts);
+      const firstPostId = posts[0].id;
+      return fetch(`https://jsonplaceholder.typicode.com/comments?postId=${firstPostId}`);
+  })
+  .then((res3) => res3.json())
+  .then((comments) => {
+      console.log("Comments of first post:", comments);
+  })
+  .catch((err) => console.log("Error:", err));
+
+
+
+
