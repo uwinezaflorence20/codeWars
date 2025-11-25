@@ -28,26 +28,43 @@
                      <li>Chance of Precip ${json.chanceOfPrecipitation}</li>
                      </ul>
                      `;
-               });
+                });
             });
-         });
+        });
 
-         // another fetch
-         let url ="https://api.github.com/users/uwinezaflorence20/repos";
-         async function name() {
+        // another fetch
+        let url = "https://api.github.com/users/uwinezaflorence20/repos";
+        async function name() {
             let fe = await fetch(url);
-            let co =await fe.json();
+            let co = await fe.json();
             console.log(co)
-         }
-         name();
-         //emoji fetching from github
-         let urlEmoji ="https://api.github.com/emojis"
-         async function name2() {
+        }
+        name();
+        //emoji fetching from github
+        let urlEmoji = "https://api.github.com/emojis"
+        async function name2() {
             let em = await fetch(urlEmoji);
             let da = await em.json();
             console.log(da);
-         }
-         name2();
+        }
+        name2();
+
+// the exercises3
+        async function name(url) {
+            try{
+            let fet = await fetch(url);
+            if(!fet.ok){
+                throw  new Error(`HTTP error! Status: ${fet.status}`)
+            }
+        
+            let result = await fet.json();
+            console.log(result);
+        }catch(error){
+            console.log(error);
+        }
+        }
+        name('https://example.com/data');
+            
 
     </script>
 </body>
