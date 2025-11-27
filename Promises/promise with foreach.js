@@ -61,7 +61,7 @@ arr.forEach(ar=>{
 });
 console.log("Loop finished")
 
-//Level 2: Promises with arrays and forEach
+//Level 3: Promises.all() with arrays and forEach
 //Exercise 5
 let arr5 =['https://jsonplaceholder.typicode.com/todos/1','https://jsonplaceholder.typicode.com/todos/2','https://jsonplaceholder.typicode.com/todos/3'];
 console.log("Starting fetch for URL");
@@ -69,6 +69,34 @@ let ma = arr5.map(url => fetch(url).then((response)=>response.json()));
 Promise.all(ma).then((answer)=>{
     console.log("This are the data:",answer);
 });
+
+//Level 3: Promises with arrays and forEach
+//Exercise 6
+
+const planetImages = ['https://jsonplaceholder.typicode.com/todos/1',
+  "https://via.placeholder.com/100?text=Planet1",
+  "https://via.placeholder.com/100?text=Planet2",
+  "https://via.placeholder.com/100?text=Planet3"
+];
+let pr = planetImages.map(m=>fetch(m).then((res)=>res.json()));
+Promise.all(pr).then((ans)=>{
+    console.log(ans);
+});
+
+
+async function loadUrlsInSeries(ur) {
+  for (const url of ur) {
+    const res = await fetch(url);  // wait for this fetch to finish
+    const data = await res.json();
+    console.log("Loaded:", data);
+  }
+  console.log("All done in series");
+}
+
+const ur = ['https://jsonplaceholder.typicode.com/todos/1','https://jsonplaceholder.typicode.com/todos/2','https://jsonplaceholder.typicode.com/todos/3'];
+loadUrlsInSeries(ur);
+
+
 
 
 
