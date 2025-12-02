@@ -32,3 +32,14 @@ getPost();
 // }
 
 
+const promise = Promise.all([
+  new Promise(resolve => resolve(1)),new Promise(resolve => resolve(2)),new Promise(resolve => resolve(3))
+]);
+
+for(let i of ){
+  conso
+}
+// await assert.doesNotReject(promise);
+// assert.deepEqual(await promise, [1, 2]);
+
+
