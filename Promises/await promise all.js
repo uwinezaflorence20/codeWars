@@ -36,8 +36,8 @@ const promise = Promise.all([
   new Promise(resolve => resolve(1)),new Promise(resolve => resolve(2)),new Promise(resolve => resolve(3))
 ]);
 
-for(let i of ){
-  conso
+for(let i of h ){
+  console.log()
 }
 // await assert.doesNotReject(promise);
 // assert.deepEqual(await promise, [1, 2]);

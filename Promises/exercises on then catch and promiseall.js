@@ -122,3 +122,24 @@ Promise.resolve("Start")
 
 // 📌 Want the solutions too?
 // I can provide all the correct answers for each exercise — just tell me!
+
+
+
+
+const promise1 =  Promise.resolve("quick resolve");
+console.log(promise1);
+console.log(promise1, 'quick resolve');
+
+
+const promise = Promise.all([
+  new Promise(resolve => resolve(1)),new Promise(resolve => resolve(2)),new Promise(resolve => resolve(3))
+]);
+console.log(promise);
+console.log(promise, [1, 2]);
+
+
+
+const earlyRejectedPromise = new Promise((resolve, reject) => reject('I am a REJECTOR'));
+const lateResolvingPromise = new Promise(resolve => setTimeout(resolve, 10));
+const promise2 = Promise.race([earlyRejectedPromise, lateResolvingPromise]);
+console.log(promise2, {message: 'I am a rejector'});
