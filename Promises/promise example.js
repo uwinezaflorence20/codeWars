@@ -58,3 +58,12 @@ prom.then(handleSuccess);
 
 
 
+const promise1 = Promise.resolve(3);
+const promise7 = new Promise((resolve, reject) =>
+  setTimeout(reject, 100, "foo"),
+);
+const promises = [promise1, promise7];
+
+Promise.allSettled(promises).then((results) =>
+  results.forEach((result) => console.log(result.status)),
+);

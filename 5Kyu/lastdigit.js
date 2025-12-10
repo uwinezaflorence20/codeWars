@@ -16,3 +16,6 @@ function lastDigit(n, m) {
   const pos = m % 4n || 4n;
   return (last ** pos) % 10n;
   }
+
+
+  
