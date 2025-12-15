@@ -8,12 +8,12 @@ fivePromise()
   })  // Prints 5
 
 
-  function withConstructor(num){
+function withConstructor(num){
   return new Promise((resolve, reject) => {
     if (num === 0){
       resolve('zero');
     } else {
-      resolve('not zero');
+      reject('not zero');
     }
   });
 }
@@ -33,7 +33,7 @@ let myPromise = () => {
 }
 
 async function noAwait() {
- let value = myPromise();
+ let value =await myPromise();
  console.log(value);
 }
 

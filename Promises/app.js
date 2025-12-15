@@ -16,3 +16,21 @@ function orderSunglasses(){
 }
 let orderPromise = orderSunglasses();
 console.log(orderPromise)
+
+
+
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Middle");
+}, 0);
+
+console.log("End");
+
+

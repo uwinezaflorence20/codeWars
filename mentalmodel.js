@@ -28,4 +28,19 @@ console.log(capitalizedOdd("javascript"));
 
 
 // question with chatgpt and revision
+
+
+
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 1000);
+}
+
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("Middle");
+}, 0);
+
+console.log("End");
   
