@@ -18,3 +18,24 @@ function addNewPizza(pizza){
     return menu.push(pizza);
 }
 console.log(addNewPizza({name:"Piza",price:8}))
+
+// challenge 2
+function placeOrder(pizzaName){
+    let pizza = menu.find(user => user.name === pizzaName);
+
+        cashInRegister += pizza.price;
+        
+        let newOrder= { pizza:pizza, status: "ordered" }
+        orderQueue.push(newOrder);
+        return newOrder; 
+}
+
+/**
+ * Write another utility function, placeOrder, that takes a pizza name parameter and:
+ * 1. finds that pizza object in the menu,
+ * 2. adds the income to the cashInRegister,
+ * 3. pushes a new "order object" to the orderQueue 
+ *    (e.g. { pizza: selectedPizzaObjectFromStep1, status: "ordered" })
+ * 4. returns the new order object (just in case we need it later)
+ */
+
