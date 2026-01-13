@@ -25,6 +25,10 @@ function addNewPizza(pizzaObj: { name: string; cost?: number; price?: number }) 
 function placeOrder(pizzaName: string) {
     const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
     
+    if(!selectedPizza){
+      console.error(`${pizzaName} does not exist in the menu`;)
+        return 
+    }
     cashInRegister += selectedPizza.price
     const newOrder = { id: nextOrderId++, pizza: selectedPizza, status: "ordered" }
     orderQueue.push(newOrder)
