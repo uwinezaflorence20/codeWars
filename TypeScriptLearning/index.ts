@@ -4,16 +4,17 @@ let isStudent: boolean = false;
 type Food = string;
 let favoriteFood: Food = "pizza";
 let favoriteNumberfood: Food = "1";
-
-type Person ={
-    name:string
-    age : number
-    isStudent:boolean
-    adress:{
+  type Adress ={
         street:string
         city:string
         country:string
     }
+type Person ={
+    name:string
+    age : number
+    isStudent:boolean
+    adress:Adress
+  
 }
 let person:Person = {
   name: "joe",
