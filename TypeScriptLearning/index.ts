@@ -31,3 +31,9 @@ let person2 = {
   age: 66,
   isStudent: false,
 };
+
+function add(a: number, b: number): number {
+return a + b;
+}
+
+console.log(add(5, 3)); // Error: Argument of type 'string' is not assignable to parameter of type 'number'
