@@ -37,3 +37,7 @@ return a + b;
 }
 
 console.log(add(5, 3)); // Error: Argument of type 'string' is not assignable to parameter of type 'number'
+let something;
+something ='hello';
+something=20;
+console.log(something);
