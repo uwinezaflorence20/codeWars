@@ -51,3 +51,16 @@ console.log(ourTuple);
 ourTuple.push(10);
 ourTuple.push(true);
 console.log(ourTuple);
+
+// objects
+const car: { type: string, model: string, year: number } = {
+  type: "Toyota",
+  model: "Corolla",
+  year: 2009
+};
+console.log(car.type);
+const car2 = {
+  type: "Toyota",
+};
+car2.type = "Ford"; // no error
+car2.type = 2; 
