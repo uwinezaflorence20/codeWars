@@ -63,4 +63,6 @@ const car2 = {
   type: "Toyota",
 };
 car2.type = "Ford"; // no error
-car2.type = 2; 
+car2.type = "2"; 
+
+//
