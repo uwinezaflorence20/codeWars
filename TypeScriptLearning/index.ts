@@ -66,3 +66,4 @@ car2.type = "Ford"; // no error
 car2.type = "2"; 
 
 //
+

@@ -1,3 +1,5 @@
+import {getPizzaDetail} from './firstProgramofTypescript'
+console.log(getPizzaDetail());
 var myName = "Bob";
 var numberOfWheels = 4;
 var isStudent = false;

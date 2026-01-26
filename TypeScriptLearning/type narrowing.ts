@@ -6,4 +6,4 @@ else{
 return `The type of the ${value} is number`;
 }
 }
-console.log(example("Uwineza"));
+console.log(example("Uwineza")); 
