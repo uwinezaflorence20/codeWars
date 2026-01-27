@@ -10,22 +10,25 @@ type Order = {
     status: "ordered" | "completed"
 }
 
-const menu: Pizza[] = [
-    { id: 1, name: "Margherita", price: 8 },
-    { id: 2, name: "Pepperoni", price: 10 },
-    { id: 3, name: "Hawaiian", price: 10 },
-    { id: 4, name: "Veggie", price: 9 },
-]
+
 
 let cashInRegister = 100
 let nextOrderId = 1
+let nextPizzaId =1
 const orderQueue: Order[] = []
+const menu: Pizza[] = [
+    { id: nextPizzaId++, name: "Margherita", price: 8 },
+    { id: nextPizzaId++, name: "Pepperoni", price: 10 },
+    { id: nextPizzaId++, name: "Hawaiian", price: 10 },
+    { id: nextPizzaId++, name: "Veggie", price: 9 },
+]
 
-function addNewPizza(pizzaObj: Pizza) {
+function addNewPizza(pizzaObj: Pizza):void {
+    pizzaObj.id = nextPizzaId++
     menu.push(pizzaObj)
 }
 
-function placeOrder(pizzaName: string) {
+function placeOrder(pizzaName: string): Order| undefined {
     const selectedPizza = menu.find(pizzaObj => pizzaObj.name === pizzaName)
     if (!selectedPizza) {
         console.error(`${pizzaName} does not exist in the menu`)
@@ -37,7 +40,7 @@ function placeOrder(pizzaName: string) {
     return newOrder
 }
 
-function completeOrder(orderId: number) {
+function completeOrder(orderId: number):Order|undefined {
     const order = orderQueue.find(order => order.id === orderId)
     if (!order) {
         console.error(`${orderId} was not found in the orderQueue`)
@@ -48,7 +51,7 @@ function completeOrder(orderId: number) {
 }
 
 
-export function getPizzaDetail(identifier: string | number) {
+export function getPizzaDetail(identifier: string | number):Pizza|undefined {
     if (typeof identifier === "string") {
         return menu.find(pizza => pizza.name.toLowerCase() === identifier.toLowerCase())
     } else {
@@ -56,9 +59,27 @@ export function getPizzaDetail(identifier: string | number) {
     }
 }
  
-addNewPizza({id:5 , name: "Chicken Bacon Ranch", price: 12 })
-addNewPizza({id:6 , name: "BBQ Chicken", price: 12 })
-addNewPizza({id:7 , name: "Spicy Sausage", price: 11 })
+type User ={
+    id:number
+    username:string
+    role:'member'|'guest'|'contributor';
+}
+const users: User[]=[
+    {id:1,username:'john-doe', role:'member'}
+]
+
+function updateUser(id:number,updates:any){
+    const foundUser = users.find(user=>user.id===id);
+    if(!foundUser){
+        console.error("user not found");
+        return
+    }
+    Object.assign(foundUser,updates)
+
+}
+addNewPizza({id:nextPizzaId++ , name: "Chicken Bacon Ranch", price: 12 })
+addNewPizza({id:nextPizzaId++ , name: "BBQ Chicken", price: 12 })
+addNewPizza({id:nextPizzaId++ , name: "Spicy Sausage", price: 11 })
 
 placeOrder("Chicken Bacon Ranch")
 completeOrder(1)
@@ -66,4 +87,3 @@ completeOrder(1)
 console.log("Menu:", menu)
 console.log("Cash in register:", cashInRegister)
 console.log("Order queue:", orderQueue)
-//challenge on the type Narrowing
