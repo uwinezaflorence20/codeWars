@@ -70,3 +70,53 @@ async function abortFetching() {
 }
 
 abortFetching();
+
+// get the fastest
+async function getFastPosts(){
+    let firstURL = fetch("https://dummyjson.com/posts");
+    let secondURL = fetch("https://jsonplaceholder.typicode.com/posts");
+    let thirdURL = fetch("https://jsonplaceholder.typicode.com/posts");
+try{
+    let promise = await Promise.race([firstURL,secondURL,thirdURL]);
+     let data = await promise.json();
+    console.log("The data of the fastest URL:" ,data);
+    
+}catch(error){
+console.log("error happened",error);
+}finally{
+    console.log("Finished")
+}
+}
+getFastPosts();
+
+//Create a function called fetchUserTodos that uses the Promise.all() method to fetch users and todos concurrently
+//  from the provided API endpoints and combine them based on the userId. The function should return a 
+// promise that resolves with the combined data.
+//Users endpoints https://jsonplaceholder.typicode.com/users
+//Todos endpoints https://jsonplaceholder.typicode.com/todos
+//The returned promise should resolve into an array of users, where each user object has a new key, todos. 
+// This key should contain an array of todos that belong to the user, determined by matching the userId of 
+// the todo with the id of the user.
+
+async function fetchUserTodos() {
+    const url1 = "https://jsonplaceholder.typicode.com/users";
+    const url2 = "https://jsonplaceholder.typicode.com/todos";
+
+    try {
+        const [usersResponse, todosResponse] = await Promise.all([fetch(url1), fetch(url2)]);
+        const users = await usersResponse.json();
+        const todos = await todosResponse.json();
+
+        const combinedData = users.map(user => {
+            const userTodos = todos.filter(todo => todo.userId === user.id);
+            return { ...user, todos: userTodos };
+        });
+
+        return combinedData;
+    } catch (error) {
+        console.log("Error occurred:", error);
+    }
+}
+
+// Usage
+fetchUserTodos().then(data => console.log(data));
