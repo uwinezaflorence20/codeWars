@@ -33,13 +33,10 @@ fetching();
 async function usersAddresses(){
     // first let fetch
     let fetching = await fetch("https://jsonplaceholder.typicode.com/users");
-    let id =0;
     let data = await fetching.json();
     console.log("The data are as the following:")
     for(let i=0;i<3;i++){
-console.log(id++);
-        console.log(data[i].address )
-        
+        console.log(data[i].address)    
     }
 
 }
@@ -120,3 +117,28 @@ async function fetchUserTodos() {
 
 // Usage
 fetchUserTodos().then(data => console.log(data));
+
+// Create a counter function that counts from 1 to 5, with a 1-second delay 
+// between each number. The function should return a promise that resolves 
+// with an array of all the numbers when counting is complete. 
+// This tests your ability to create async flows with timing and collect results over time.
+
+// Requirements:
+
+// Function asyncCounter() counts 1, 2, 3, 4, 5
+// 1-second delay between each number
+// Return promise that resolves with [1, 2, 3, 4, 5]
+// Use async/await or promise chaining
+
+async function asyncCounter(){
+    let results =[];
+    for(let i=1;i<=5;i++){
+        await new Promise(resolve=>setTimeout(resolve,1000));
+        results.push(i);
+        console.log(i)
+    }
+    return results;
+}
+asyncCounter().then((num)=>{
+    console.log("The Array of five counts",num)
+})
