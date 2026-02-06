@@ -14,3 +14,13 @@ function addToArray<T>(array:T[],item:T):T[]{
 array.push(item);
 return array
 }
+
+enum Direction {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+let move: Direction = Direction.Up;
+console.log(move); // 0 → Up is mapped to 0 by default
