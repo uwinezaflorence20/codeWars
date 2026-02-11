@@ -24,18 +24,40 @@ createRoot(document.getElementById('root')).render(
 // document.getElementById("root").appendChild(h1)
 
 
-const root = createRoot(document.getElementById('root'));
-root.render(
-  <div>
-    <img src="../src/assets/react.svg"/>
-<h1> Fun facts about React</h1>
-<ul>
-  <li>Was first released in 2013</li>
-  <li>Was originally created by jordan walkie</li>
-  <li>Has well over 100k hits on githubs</li>
-  <li>Is maintained by Meta</li>
-  <li>Powers thousands of rnterprise apps, including mobile apps</li>
-</ul>
+// const root = createRoot(document.getElementById('root'));
+// root.render(
+// temporaryNames()
+// )
 
-</div>
-)
+// function temporaryNames(){
+//   return (<div>
+//     <img src="../src/assets/react.svg"/>
+// <h1> Fun facts about React</h1>
+// <ul>
+//   <li>Was first released in 2013</li>
+//   <li>Was originally created by jordan walkie</li>
+//   <li>Has well over 100k hits on githubs</li>
+//   <li>Is maintained by Meta</li>
+//   <li>Powers thousands of rnterprise apps, including mobile apps</li>
+// </ul>
+
+// </div>
+//   )
+// }
+
+const  root = createRoot(document.getElementById("root"));
+root.render(
+<Page/>
+);
+
+function Page(){
+  return(
+    <div>
+      <ol>
+        <li>getting more skill on react</li>
+        <li>becoming professional with react</li>
+        <li>pass the gate</li>
+      </ol>
+    </div>
+  )
+}
