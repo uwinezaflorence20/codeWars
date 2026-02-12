@@ -70,21 +70,33 @@ Punchline="I can't wait to see her face light up when she opens it."
 <Jokes 
 Setup="How did the hacker escape the police?"
 Punchline="He just ransomware!"
+ upvotes={10}
+                isPun={true}
 />
 
 <Jokes 
 Setup="Why don't pirates travel on mountain roads?"
 Punchline="Scurvy."
+ upvotes={10}
+                isPun={true}
 />
 
 <Jokes 
 Setup="Why do bees stay in the hive in the winter?"
 Punchline="Swarm."
+ upvotes={10}
+  isPun={true}
+  comments={[
+                    {author: "", text: "", title: ""},
+                    {author: "", text: "", title: ""}
+                ]}
 />
 
 <Jokes 
 Setup="What's the best thing about Switzerland?"
 Punchline="I don't know, but the flag is a big plus!"
+ upvotes={10}
+                isPun={true}
 />
 
 
