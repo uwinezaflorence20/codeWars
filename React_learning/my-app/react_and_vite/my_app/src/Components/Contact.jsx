@@ -1,7 +1,7 @@
 export default function Contact({img,name,email,phone}){
 
     return(
-    <div className="gr">
+
         <article className="contact-card">
             <img
                 src={img}
@@ -23,7 +23,7 @@ export default function Contact({img,name,email,phone}){
                 <p>{email}</p>
             </div>
         </article>
-        </div>
+        
 
     )
 }
