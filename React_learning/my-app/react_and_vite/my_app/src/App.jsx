@@ -5,6 +5,7 @@ import NewApp from "./Components/Newapp";
 import Entry from "./Components/Entry";
 import Contact from "./Components/Contact";
 import Jokes from "./Components/Jokes";
+import jokesData from "./jokesData";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -21,75 +22,113 @@ function App() {
   } else {
     timeOfDay = "night";
   }
+  console.log(jokesData)
+  const jokeElements = jokesData.map((joke)=>{
+    return <Jokes Setup ={joke.Setup} Punchline={joke.punchline}/>
+  })
+// starting with the map method in react jsx
+const ninjaTurtles = [
+   <h2>Donatello</h2>, 
+        <h2>Michaelangelo</h2>,
+        <h2>Rafael</h2>,
+        <h2>Leonardo</h2>
+]
 
   return (
     <>
+
+ <h1> Maps</h1>
+ {ninjaTurtles}
+ {jokeElements}
+
       <Header />
       <Main />
       <NewApp />
       <div className="grid grid-cols-2">
-      <Entry
-        img={{
-          src: "https://scrimba.com/links/travel-journal-japan-image-url",
-          alt: "Mount Fuji",
-        }}
-        title="Mount Fuji"
-        country="Japan"
-        googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
-        dates="12 Jan, 2021 - 24 Jan, 2021"
-        text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
-      />
+        <Entry
+          img={{
+            src: "https://scrimba.com/links/travel-journal-japan-image-url",
+            alt: "Mount Fuji",
+          }}
+          title="Mount Fuji"
+          country="Japan"
+          googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
+          dates="12 Jan, 2021 - 24 Jan, 2021"
+          text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+        />
 
-  <Entry
-        img={{
-          src: "https://scrimba.com/links/travel-journal-japan-image-url",
-          alt: "Mount Fuji",
-        }}
-        title="Mount Fuji"
-        country="Japan"
-        googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
-        dates="12 Jan, 2021 - 24 Jan, 2021"
-        text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
-      />
-</div>
+        <Entry
+          img={{
+            src: "https://scrimba.com/links/travel-journal-japan-image-url",
+            alt: "Mount Fuji",
+          }}
+          title="Mount Fuji"
+          country="Japan"
+          googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
+          dates="12 Jan, 2021 - 24 Jan, 2021"
+          text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+        />
 
+        <Entry
+          img={{
+            src: "public/10.jpg",
+            alt: "Mount Shunji",
+          }}
+          title="Mount Shunji"
+          country="Japan"
+          googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
+          dates="12 Jan, 2021 - 24 Jan, 2021"
+          text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+        />
 
+        <Entry
+          img={{
+            src: "public/10.jpg",
+            alt: "Mount Shunji",
+          }}
+          title="Mount Shunji"
+          country="Japan"
+          googleMapsLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
+          dates="12 Jan, 2021 - 24 Jan, 2021"
+          text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+        />
+      </div>
 
       <p>
         The firstname is {firstName} and the last name is {secondName}
       </p>
 
       <p>Good {timeOfDay}</p>
-<div className="grid grid-cols-2">
-      <Contact
-        img="public/3.jpg"
-        name="Mr.Wiskerson"
-        phone="(212) 555-1234"
-        email="mr.wiskaz@catnap.meow"
-      />
+      <div className="grid grid-cols-2">
+        <Contact
+          img="public/3.jpg"
+          name="Mr.Wiskerson"
+          phone="(212) 555-1234"
+          email="mr.wiskaz@catnap.meow"
+        />
 
-      <Contact
-        img="public/3.jpg"
-        name="Mr.Wiskerson2"
-        phone="(212) 555-1235"
-        email="mr.wiskaz2@catnap.meow"
-      />
+        <Contact
+          img="public/3.jpg"
+          name="Mr.Wiskerson2"
+          phone="(212) 555-1235"
+          email="mr.wiskaz2@catnap.meow"
+        />
 
-      <Contact
-        img="public/4.avif"
-        name="Mr.Wiskerson3"
-        phone="(212) 555-1235"
-        email="mr.wiskaz3@catnap.meow"
-      />
+        <Contact
+          img="public/4.avif"
+          name="Mr.Wiskerson3"
+          phone="(212) 555-1235"
+          email="mr.wiskaz3@catnap.meow"
+        />
 
-      <Contact
-        img="public/5.jpg"
-        name="Mr.Wiskerson4"
-        phone="(212) 555-1237"
-        email="mr.wiskaz4@catnap.meow"
-      />
-      {/* jokes */}
-</div>
+        <Contact
+          img="public/5.jpg"
+          name="Mr.Wiskerson4"
+          phone="(212) 555-1237"
+          email="mr.wiskaz4@catnap.meow"
+        />
+        {/* jokes */}
+      </div>
       <Jokes
         Setup="I got my daughter a fridge for her birthday."
         Punchline="I can't wait to see her face light up when she opens it."
@@ -126,6 +165,9 @@ function App() {
         upvotes={10}
         isPun={true}
       />
+{/* starting with the map */}
+
+
     </>
   );
 }
