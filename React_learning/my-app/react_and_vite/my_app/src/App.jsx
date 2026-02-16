@@ -6,6 +6,10 @@ import Entry from "./Components/Entry";
 import Contact from "./Components/Contact";
 import Jokes from "./Components/Jokes";
 import jokesData from "./jokesData";
+import data from "./data";
+import Person from "./Components/Person";
+import people from "./people";
+
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -22,24 +26,55 @@ function App() {
   } else {
     timeOfDay = "night";
   }
-  console.log(jokesData)
-  const jokeElements = jokesData.map((joke)=>{
-    return <Jokes Setup ={joke.Setup} Punchline={joke.punchline}/>
+  console.log(jokesData);
+  const jokeElements = jokesData.map((joke) => {
+    return <Jokes Setup={joke.Setup} Punchline={joke.punchline} />;
+  });
+  // starting with the map method in react jsx
+  const ninjaTurtles = [
+    <h2>Donatello</h2>,
+    <h2>Michaelangelo</h2>,
+    <h2>Rafael</h2>,
+    <h2>Leonardo</h2>,
+  ];
+
+
+  // map challenge 
+  let theChallenge = data.map((entry)=>{
+    return <Entry
+   key = {entry.id}
+     img = {entry.img}
+     title = {entry.title}
+     country = {entry.country}
+     googleMapsLink = {entry.googleMapsLink}
+    dates = {entry.dates}
+    text = {entry.text}     
+    />
   })
-// starting with the map method in react jsx
-const ninjaTurtles = [
-   <h2>Donatello</h2>, 
-        <h2>Michaelangelo</h2>,
-        <h2>Rafael</h2>,
-        <h2>Leonardo</h2>
-]
+   
+
+  let person = people.map((data)=>{
+    return <Person
+    id = {data.id}
+   data ={data}
+    />
+  })
+  console.log(theChallenge)
 
   return (
     <>
-
- <h1> Maps</h1>
- {ninjaTurtles}
- {jokeElements}
+    <div className="grid grid-cols-2">
+         {theChallenge}
+     
+    </div>
+    
+   <div className="grid grid-cols-3">
+      {person}
+      </div>
+      <h1> Maps</h1>
+      {ninjaTurtles}
+      {jokeElements}
+    
 
       <Header />
       <Main />
@@ -165,9 +200,7 @@ const ninjaTurtles = [
         upvotes={10}
         isPun={true}
       />
-{/* starting with the map */}
-
-
+      {/* starting with the map */}
     </>
   );
 }

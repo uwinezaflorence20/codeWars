@@ -2,6 +2,7 @@ export default function Entry(props) {
     return (
         <article className="journal-entry ">
             <div className="main-image-container">
+               
                 <img 
                     className="main-image "
                     src={props.img.src}
