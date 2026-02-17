@@ -9,6 +9,8 @@ import jokesData from "./jokesData";
 import data from "./data";
 import Person from "./Components/Person";
 import people from "./people";
+import Chef from "./Components/Chef";
+import Form from "./Components/Form";
 
 function App() {
   let firstName = "Uwineza";
@@ -57,6 +59,7 @@ function App() {
     return <Person
     id = {data.id}
    data ={data}
+   //{...data}
     />
   })
   console.log(theChallenge)
@@ -134,7 +137,7 @@ function App() {
       </p>
 
       <p>Good {timeOfDay}</p>
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 bg-[#282D35]">
         <Contact
           img="public/3.jpg"
           name="Mr.Wiskerson"
@@ -164,6 +167,7 @@ function App() {
         />
         {/* jokes */}
       </div>
+      <div className="bg-[#282D35]">
       <Jokes
         Setup="I got my daughter a fridge for her birthday."
         Punchline="I can't wait to see her face light up when she opens it."
@@ -200,8 +204,21 @@ function App() {
         upvotes={10}
         isPun={true}
       />
+      </div>
       {/* starting with the map */}
+
+      {/* chef website */}
+  
+ <Chef 
+      img="public/image.png"
+      alt ="this is image"
+      name="Chef Paul"
+      />
+      
+ <Form/>
+      
     </>
+    
   );
 }
 

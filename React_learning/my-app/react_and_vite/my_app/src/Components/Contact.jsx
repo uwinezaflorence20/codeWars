@@ -2,7 +2,7 @@ export default function Contact({img,name,email,phone}){
 
     return(
 
-        <article className="contact-card">
+        <article className="contact-card ">
             <img
                 src={img}
                 alt="Photo of Mr. Whiskerson"

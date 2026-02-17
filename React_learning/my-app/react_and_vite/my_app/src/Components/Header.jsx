@@ -1,7 +1,7 @@
 function Header(){
     return(
         <header>
-            <nav>
+            <nav className="bg-[#282D35]">
                 <img src="/public/react.svg" alt="React logo" />
                 <span>ReactFacts</span>
             </nav>
