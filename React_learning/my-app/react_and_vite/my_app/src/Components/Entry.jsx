@@ -12,7 +12,7 @@ export default function Entry(props) {
             <div className="info-container">
                 <img 
                     className="marker"
-                    src="https://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-PNG-HD.png" 
+                    src="public/this.png" 
                     alt="map marker icon"
                 />
                 <span className="country">{props.country}</span>

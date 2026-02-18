@@ -11,6 +11,9 @@ import Person from "./Components/Person";
 import people from "./people";
 import Chef from "./Components/Chef";
 import Form from "./Components/Form";
+import Event from "./Components/Event";
+import HookUseState from "./Components/HookUsestate";
+import StateCount from "./Components/StateCount";
 
 function App() {
   let firstName = "Uwineza";
@@ -40,44 +43,40 @@ function App() {
     <h2>Leonardo</h2>,
   ];
 
+  // map challenge
+  let theChallenge = data.map((entry) => {
+    return (
+      <Entry
+        key={entry.id}
+        img={entry.img}
+        title={entry.title}
+        country={entry.country}
+        googleMapsLink={entry.googleMapsLink}
+        dates={entry.dates}
+        text={entry.text}
+      />
+    );
+  });
 
-  // map challenge 
-  let theChallenge = data.map((entry)=>{
-    return <Entry
-   key = {entry.id}
-     img = {entry.img}
-     title = {entry.title}
-     country = {entry.country}
-     googleMapsLink = {entry.googleMapsLink}
-    dates = {entry.dates}
-    text = {entry.text}     
-    />
-  })
-   
-
-  let person = people.map((data)=>{
-    return <Person
-    id = {data.id}
-   data ={data}
-   //{...data}
-    />
-  })
-  console.log(theChallenge)
+  let person = people.map((data) => {
+    return (
+      <Person
+        id={data.id}
+        data={data}
+        //{...data}
+      />
+    );
+  });
+  console.log(theChallenge);
 
   return (
     <>
-    <div className="grid grid-cols-2">
-         {theChallenge}
-     
-    </div>
-    
-   <div className="grid grid-cols-3">
-      {person}
-      </div>
+      <div className="grid grid-cols-2">{theChallenge}</div>
+
+      <div className="grid grid-cols-3">{person}</div>
       <h1> Maps</h1>
       {ninjaTurtles}
       {jokeElements}
-    
 
       <Header />
       <Main />
@@ -168,57 +167,50 @@ function App() {
         {/* jokes */}
       </div>
       <div className="bg-[#282D35]">
-      <Jokes
-        Setup="I got my daughter a fridge for her birthday."
-        Punchline="I can't wait to see her face light up when she opens it."
-      />
+        <Jokes
+          Setup="I got my daughter a fridge for her birthday."
+          Punchline="I can't wait to see her face light up when she opens it."
+        />
 
-      <Jokes
-        Setup="How did the hacker escape the police?"
-        Punchline="He just ransomware!"
-        upvotes={10}
-        isPun={true}
-      />
+        <Jokes
+          Setup="How did the hacker escape the police?"
+          Punchline="He just ransomware!"
+          upvotes={10}
+          isPun={true}
+        />
 
-      <Jokes
-        Setup="Why don't pirates travel on mountain roads?"
-        Punchline="Scurvy."
-        upvotes={10}
-        isPun={true}
-      />
+        <Jokes
+          Setup="Why don't pirates travel on mountain roads?"
+          Punchline="Scurvy."
+          upvotes={10}
+          isPun={true}
+        />
 
-      <Jokes
-        Setup="Why do bees stay in the hive in the winter?"
-        Punchline="Swarm."
-        upvotes={10}
-        isPun={true}
-        comments={[
-          { author: "", text: "", title: "" },
-          { author: "", text: "", title: "" },
-        ]}
-      />
+        <Jokes
+          Setup="Why do bees stay in the hive in the winter?"
+          Punchline="Swarm."
+          upvotes={10}
+          isPun={true}
+          comments={[
+            { author: "", text: "", title: "" },
+            { author: "", text: "", title: "" },
+          ]}
+        />
 
-      <Jokes
-        Setup="What's the best thing about Switzerland?"
-        Punchline="I don't know, but the flag is a big plus!"
-        upvotes={10}
-        isPun={true}
-      />
+        <Jokes
+          Setup="What's the best thing about Switzerland?"
+          Punchline="I don't know, but the flag is a big plus!"
+          upvotes={10}
+          isPun={true}
+        />
       </div>
-      {/* starting with the map */}
 
-      {/* chef website */}
-  
- <Chef 
-      img="public/image.png"
-      alt ="this is image"
-      name="Chef Paul"
-      />
-      
- <Form/>
-      
+      <Chef img="public/image.png" alt="this is image" name="Chef Paul" />
+      <Form />
+      <Event/>
+      <HookUseState/>
+      <StateCount/>
     </>
-    
   );
 }
 
