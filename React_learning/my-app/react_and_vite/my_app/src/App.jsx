@@ -15,6 +15,7 @@ import Event from "./Components/Event";
 import HookUseState from "./Components/HookUsestate";
 import StateCount from "./Components/StateCount";
 import AllFavoriteThing from "./Components/AllFavoriteThings";
+import ObjectForm from "./Components/ObjectForm";
 
 function App() {
   let firstName = "Uwineza";
@@ -212,6 +213,7 @@ function App() {
       <HookUseState/>
       <StateCount/>
       <AllFavoriteThing/>
+      <ObjectForm/>
     </>
   );
 }

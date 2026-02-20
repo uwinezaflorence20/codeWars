@@ -15,11 +15,7 @@ let [ingredients, setIngredients] = React.useState([])
       
 
           setIngredients(fruit=>
-            [...fruit,newIngredient])
-
-
-     
-        
+            [...fruit,newIngredient])   
     }
     
     return (
