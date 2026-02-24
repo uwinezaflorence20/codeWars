@@ -16,6 +16,8 @@ export default function FormLearning() {
     console.log(employmentStatus);
     const dietaryRestrictions = formData.getAll("dietaryRestrictions");
     console.log(dietaryRestrictions);
+    const favColor = formData.get('favColor');
+    console.log(favColor)
   }
   return (
     <section className="start">
@@ -78,6 +80,20 @@ export default function FormLearning() {
             Gluten-free
           </label>
         </fieldset>
+
+    <label htmlFor="favColor">What is your favorite color?</label>
+        <select id="favColor" name="favColor" defaultValue="" className="border-2" required>
+          <option value="" disabled>-- Choose a color --</option>
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="indigo">Indigo</option>
+          <option value="violet">Violet</option>
+        </select>
+
+      
 
         <button>Submit</button>
       </form>
