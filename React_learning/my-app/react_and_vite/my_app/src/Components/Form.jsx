@@ -7,20 +7,25 @@ let [ingredients, setIngredients] = React.useState([])
         <li key={ingredient}>{ingredient}</li>
     ))
 
-    function handleSubmit(event) {
-           event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const newIngredient =formData.get("ingredient");
-        console.log(newIngredient);
+    // function handleSubmit(event) {
+    //        event.preventDefault();
+    //     const formData = new FormData(event.currentTarget);
+    //     const newIngredient =formData.get("ingredient");
+    //     console.log(newIngredient);
       
 
-          setIngredients(fruit=>
-            [...fruit,newIngredient])   
+    //       setIngredients(fruit=>
+    //         [...fruit,newIngredient])   
+    // }
+    function submitted(formData){
+        const newIngredient =  formData.get("ingredient");
+        setIngredients(prevIngredient =>[...prevIngredient,newIngredient])
+        
     }
     
     return (
         <main>
-            <form onSubmit={handleSubmit} className="add-ingredient-form">
+            <form action={submitted} className="add-ingredient-form">
                 <input 
                     type="text"
                     placeholder="e.g. oregano"

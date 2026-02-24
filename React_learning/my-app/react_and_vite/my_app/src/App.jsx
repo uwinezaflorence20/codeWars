@@ -16,6 +16,8 @@ import HookUseState from "./Components/HookUsestate";
 import StateCount from "./Components/StateCount";
 import AllFavoriteThing from "./Components/AllFavoriteThings";
 import ObjectForm from "./Components/ObjectForm";
+import FormLearning from "./Components/FormLearning";
+import TaskAdd from "./Components/TaskAdd";
 
 function App() {
   let firstName = "Uwineza";
@@ -214,6 +216,8 @@ function App() {
       <StateCount/>
       <AllFavoriteThing/>
       <ObjectForm/>
+      <FormLearning/>
+      <TaskAdd/>
     </>
   );
 }
