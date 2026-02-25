@@ -1,7 +1,9 @@
 import React from "react"
 
 export default function StateCount() {
-let [count , setCount]= React.useState(0);
+let [count , setCount]= React.useState(0   
+    
+);
 function addition(){
 setCount(prevCount => prevCount+1 );
 }

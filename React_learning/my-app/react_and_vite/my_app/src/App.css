@@ -1,24 +1,22 @@
 * {
     box-sizing: border-box;
 }
-ul {
-    list-style: disc !important;
-    padding-left: 20px !important;
-}
 
-li::marker {
-    color: #61DAFB;
-}
-
+/* ================= GLOBAL ================= */
 
 body {
     margin: 0;
     font-family: Inter, sans-serif;
-    /* background-color: #282D35;  */
     color: white;
-
-    
 }
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: black;
+}
+
+/* ================= HEADER ================= */
 
 header {
     height: 90px;
@@ -43,6 +41,28 @@ nav > span {
     font-weight: 700;
 }
 
+.header-new {
+    background: #F55A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 80px;
+}
+
+.header-new > h1 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: Inter, sans-serif;
+}
+
+.img {
+    width: 24px;
+    margin-right: 7px;
+}
+
+/* ================= MAIN ================= */
+
 main {
     padding: 60px 30px;
 }
@@ -51,6 +71,8 @@ main > h1 {
     margin: 0;
     font-size: 2.4rem;
 }
+
+/* ================= FACTS LIST ================= */
 
 .facts-list {
     margin-top: 46px;
@@ -66,46 +88,16 @@ main > h1 {
     color: #61DAFB;
 }
 
-.header-new{
- background: #F55A5A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 80px;
-}
-.img{
-    width: 24px;
-    margin-right: 7px;
-
-}
-.header-new>h1{
-  font-size: 0.9rem;
-    font-weight: 500;
-    font-family: Inter;
-}
-
-.journal-entry{
-    background-color: white;
-    color: black;
-    width: 100%;
-    padding: 20px;
-}
-.main-image-container{
-    width: 40%;
-}
-.info-container{
-    width: 32%;
-}
-.marker{
-    width: 100px;
-}
-
+/* ================= JOURNAL ENTRY ================= */
 
 article.journal-entry {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 20px;
 }
 
 article.journal-entry .marker {
@@ -126,6 +118,10 @@ article.journal-entry .main-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.info-container {
+    width: 32%;
 }
 
 .info-container span.country {
@@ -157,11 +153,11 @@ article.journal-entry .main-image {
     font-size: 0.8rem;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;  
+    -webkit-box-orient: vertical;
     overflow: hidden;
 }
 
-
+/* ================= CONTACTS ================= */
 
 .contacts {
     display: flex;
@@ -179,11 +175,9 @@ article.journal-entry .main-image {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 13px;
-    padding-bottom: 20px;
+    padding: 20px;
     background-color: white;
     margin: 20px;
-    padding: 20px;
 }
 
 .contact-card > img {
@@ -214,9 +208,13 @@ article.journal-entry .main-image {
     font-size: 12px;
     color: #2B283A;
 }
-.mine{
+
+/* ================= INGREDIENT FORM ================= */
+
+.mine {
     background-color: white;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.10),
+                0px 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .add-ingredient-form {
@@ -230,7 +228,7 @@ article.journal-entry .main-image {
     border-radius: 6px;
     border: 1px solid #D1D5DB;
     padding: 9px 13px;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     flex-grow: 1;
     min-width: 150px;
     max-width: 400px;
@@ -251,19 +249,17 @@ article.journal-entry .main-image {
     content: "+";
     margin-right: 5px;
 }
-ul{
-    color: black;
-}
+
+/* ================= COUNTER ================= */
 
 .container1 {
     display: flex;
     flex-direction: column;
-       margin: 0;
+    margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #262626;
     color: #D9D9D9;
     padding: 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -276,7 +272,6 @@ ul{
 .counter1 {
     display: flex;
     align-items: flex-end;
-    align-self: center;
     margin-top: 40px;
 }
 
@@ -293,7 +288,6 @@ ul{
 
 .counter1 > button:hover {
     background-color: #404040;
-    color: #D9D9D9;
 }
 
 .count1 {
@@ -305,7 +299,7 @@ ul{
     justify-content: center;
     align-items: center;
     color: #262626;
-    margin-block: 0 10px;
+    margin-bottom: 10px;
     font-size: 2rem;
 }
 
@@ -318,20 +312,21 @@ ul{
     z-index: 1;
 }
 
-
-
-
-
-
+/* ================= BUTTON SECTION ================= */
 
 .main1 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-      background-color: #70B85D;
+    background-color: #70B85D;
     color: white;
     padding: 20px;
     font-size: 1.3rem;
+}
+
+.main1 p {
+    margin-block: 10px;
+    font-size: 2rem;
 }
 
 .button1 {
@@ -352,48 +347,7 @@ ul{
     color: #2C5E2E;
 }
 
-.button1:focus {
-    outline: 0;
-}
-
-p {
-    margin-block: 10px;
-    font-size: 2rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ================= CARD ================= */
 
 .main2 {
     height: 100vh;
@@ -441,12 +395,7 @@ p {
     background: transparent;
 }
 
-.card2 .favorite-button:active {
-    transform: none;
-    box-shadow: none;
-}
-
-
+/* ================= FORM ================= */
 
 .start {
     margin: 0;
@@ -490,16 +439,95 @@ button:hover {
     border-color: #042F2E;
     color: white;
 }
+
 fieldset {
-     border: 1px solid #262626;
+    border: 1px solid #262626;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
+
 textarea {
     margin-bottom: 20px;
 }
 
 
+main {
+    margin-top: 20px;
+    padding: 30px 30px 10px;
+}
 
+.add-ingredient-form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    height: 38px;
+}
 
+.add-ingredient-form > input {
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    padding: 9px 13px;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 400px;
+}
+
+.add-ingredient-form > button {
+    font-family: Inter, sans-serif;
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    width: 150px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.add-ingredient-form > button::before {
+    content: "+";
+    margin-right: 5px;
+}
+
+ul.ingredients-list {
+    margin-bottom: 48px;
+}
+
+ul.ingredients-list > li {
+    color: #475467;
+    line-height: 28px;
+}
+
+.get-recipe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #F0EFEB;
+    padding: 10px 28px;
+}
+
+.get-recipe-container h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.get-recipe-container p {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 20px;
+}
+
+.get-recipe-container button {
+    border: none;
+    border-radius: 6px;
+    background: #D17557;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    color: #FAFAF8;
+    padding: 9px 17px;
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
