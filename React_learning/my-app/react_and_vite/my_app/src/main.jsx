@@ -1,9 +1,10 @@
-import { createRoot } from "react-dom/client"
+import ReactDOM from 'react-dom/client';
 import App from "./App"
 import './index.css'
 
-
-const root = createRoot(document.getElementById("root"))
+ReactDOM
+    .createRoot(document.getElementById('root'))
+    .render(<App darkMode={false} />);
 
 /**
 Challenge: Project setup
@@ -26,4 +27,3 @@ Challenge: Project setup
   works if you haven't done it before.
 */
 
-root.render(<App />)
