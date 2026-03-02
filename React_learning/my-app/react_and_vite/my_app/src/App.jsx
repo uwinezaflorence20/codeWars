@@ -22,6 +22,8 @@ import TaskAdd from "./Components/TaskAdd";
 import Heade2 from "./Components/Header2";
 import Body from "./Body";
 import Pads from "./Components/Pads";
+import GateFirstQuestion from "./Components/GateFirstQuestion";
+import AngeandUsername from "./Components/AgeandUsename";
 
 function App() {
   let firstName = "Uwineza";
@@ -76,7 +78,7 @@ function App() {
     );
   });
   console.log(theChallenge);
-  const [userName] = React.useState("Joe")
+  const [userName] = React.useState("Joe");
 
   return (
     <>
@@ -216,18 +218,18 @@ function App() {
 
       <Chef img="public/image.png" alt="this is image" name="Chef Paul" />
       <Form />
-      <Event/>
-      <HookUseState/>
-      <StateCount/>
-      <AllFavoriteThing/>
-      <ObjectForm/>
-      <FormLearning/>
-      <TaskAdd/>
-   
-        <Heade2 userName ={userName}/>
-        <Body userName={userName}/>
-        <Pads/>
-   
+      <Event />
+      <HookUseState />
+      <StateCount />
+      <AllFavoriteThing />
+      <ObjectForm />
+      <FormLearning />
+      <TaskAdd />
+      <Heade2 userName={userName} />
+      <Body userName={userName} />
+      <Pads />
+      <GateFirstQuestion />
+      <AngeandUsername/>
     </>
   );
 }
