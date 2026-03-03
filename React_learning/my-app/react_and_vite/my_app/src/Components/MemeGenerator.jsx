@@ -1,6 +1,9 @@
+
+import React, { useState } from "react"
 export default function MemeGenerator(){
+    const [meme,setMeme] = useState();
     return(
-       <main>
+       <main className="text-black">
             <div className="form">
                 <label>Top Text
                     <input

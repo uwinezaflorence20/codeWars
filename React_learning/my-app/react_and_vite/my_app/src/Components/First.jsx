@@ -1,8 +1,8 @@
-import trollFace from "../images/troll-face.png"
+import trollFace from '/troll-face.jpg'
 
 export default function First() {
     return (
-        <header className="header">
+        <header className="header text-black">
             <img 
                 src={trollFace} 
             />
