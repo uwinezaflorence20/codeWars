@@ -425,7 +425,7 @@ input {
     text-indent: 10px;
 }
 
-button {
+/* button {
     border-radius: 100px;
     border: 1px solid #0D9488;
     padding: 10px 30px;
@@ -438,7 +438,7 @@ button:hover {
     background-color: #115E59;
     border-color: #042F2E;
     color: white;
-}
+} */
 
 fieldset {
     border: 1px solid #262626;
@@ -570,7 +570,7 @@ ul.ingredients-list > li {
     gap: 10px;
 }
 
-button {
+/* button {
     height: 100px;
     width: 100px;
     border: 3px solid white;
@@ -581,4 +581,4 @@ button {
 }
 button.on{
     opacity: 1;
-}
+} */

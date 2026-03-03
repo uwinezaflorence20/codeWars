@@ -24,6 +24,8 @@ import Body from "./Body";
 import Pads from "./Components/Pads";
 import GateFirstQuestion from "./Components/GateFirstQuestion";
 import AngeandUsername from "./Components/AgeandUsename";
+import Calculator from "./Components/Calculator";
+import ProjectCalculator from "./Components/ProjectCalculator";
 
 function App() {
   let firstName = "Uwineza";
@@ -230,6 +232,8 @@ function App() {
       <Pads />
       <GateFirstQuestion />
       <AngeandUsername/>
+       {/* <Calculator/>  */}
+      <ProjectCalculator/>
     </>
   );
 }
