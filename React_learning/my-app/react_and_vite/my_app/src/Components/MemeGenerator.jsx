@@ -2,16 +2,16 @@ import { useState } from "react";
 
 export default function MemeGenerator() {
   const [meme, setMeme] = useState({
-    topText: "One does not simply",
+    topText: "one does not simpley",
     bottomText: "Walk into Mordor",
     imageUrl: "http://i.imgflip.com/1bij.jpg",
   });
 
   function handleChange(event) {
-    const { value } = event.currentTarget;
+    const { value,name } = event.currentTarget;
     setMeme((prevMeme) => ({
       ...prevMeme,
-      topText: value,
+      [name]: value,
     }));
   }
   function HandleAnotherChange(event) {
@@ -32,6 +32,7 @@ export default function MemeGenerator() {
             placeholder="One does not simply"
             name="topText"
             onChange={handleChange}
+            value={meme.topText}
           />
         </label>
 
@@ -41,6 +42,7 @@ export default function MemeGenerator() {
           placeholder="Walk into Mordor" 
           name="bottomText"
           onChange={HandleAnotherChange}
+          value={meme.bottomText}
           />
         </label>
         <button>Get a new meme image 🖼</button>
