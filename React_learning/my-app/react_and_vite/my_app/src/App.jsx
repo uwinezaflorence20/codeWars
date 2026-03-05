@@ -29,6 +29,7 @@ import ProjectCalculator from "./Components/ProjectCalculator";
 import First from "./Components/First";
 import MemeGenerator from "./Components/MemeGenerator";
 import Fetching from "./Components/Fetching";
+import Todo from "./Components/Todo";
 
 function App() {
   let firstName = "Uwineza";
@@ -240,6 +241,7 @@ function App() {
       <First/>
       <MemeGenerator/>
       <Fetching/>
+      <Todo/>
     </>
   );
 }
