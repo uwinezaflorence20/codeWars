@@ -13,7 +13,7 @@ export default function Todo() {
       <div className="text-gray-400">
         <h1 className="text-6xl py-20">todos</h1>
       </div>
-      <div className="flex">
+      <div className="flex justify-center">
         <form action="">
             <input type="text"
             placeholder="Add todo"
@@ -21,15 +21,19 @@ export default function Todo() {
             onChange={(e)=>setTodo(e.target.value)}
             value={todo} 
              />
-             <a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by dmitri13 - Flaticon</a>
              
         </form>
         <button className="p-2 bg-red-600 rounded-full" onClick={handleAddTodo}>+</button>
       </div>
-        <div>
-        <ul>{todos.map((data,index)=>(
-          <li key ={index}>{data}</li>
-        ))}</ul>
+        <div className="flex justify-center ">
+        <h1 className=" flex flex-col justify-start items-start ">{todos.map((data,index)=>(
+           <h1 key ={index} className="text-xl" >
+            <input type="checkbox" />
+            {data}
+          <button className="text-red-600 ml-10 font-bold bg-gray-300 p-2 rounded-full">X</button>
+          </h1> 
+          
+        ))}</h1>
         </div>
     </div>
   );
