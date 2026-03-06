@@ -2,7 +2,7 @@ import React from "react";
 export default function Todo() {
   let [todo, setTodo] = React.useState("");
   const [todos, setTodos] = React.useState([]);
-  const[checked,setChecked] = React.useState(false)
+  const [checked, setChecked] = React.useState(null);
   const handleAddTodo = () => {
     if (todo.trim() === "") return "";
     setTodos([...todos, todo]);
@@ -19,23 +19,30 @@ export default function Todo() {
           <input
             type="text"
             placeholder="Add todo"
-            className=" border-2 border-b-gray-700"
-            onChange={(e) => setTodo(e.target.value)}
+            className="border-2 border-red-500 p-6 w-[600px] bg-white shadow-xl rounded"
             value={todo}
+            onChange={(e) => setTodo(e.target.value)}
           />
         </form>
-        <button className="p-2 bg-red-600 rounded-full" onClick={handleAddTodo}>
+        <button
+          className="absolute text-xl font-bold text-white ml-[500px] bg-[#008989] px-2 rounded-full mt-2"
+          onClick={handleAddTodo}
+        >
           +
         </button>
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-center mt-10 ">
         <h1 className=" flex flex-col justify-start items-start  ">
           {todos.map((data, index) => (
-            <h1 key={index} className={checked?"line-through":""} >
-              <input type="checkbox"
-              onChange={(e)=>setChecked(e.target.checked) }
+            <h1 key={index} className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                checked={checked === index}
+                onChange={() => setChecked(checked === index ? null : index)}
               />
-              {data }
+              <span className={checked === index ? "line-through" : ""}>
+                {data}
+              </span>
               <button
                 className="text-red-600 ml-10 font-bold bg-gray-300 p-2 rounded-full"
                 onClick={() => setTodos(todos.filter((_, i) => i !== index))}
