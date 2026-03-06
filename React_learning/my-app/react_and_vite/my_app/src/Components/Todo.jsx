@@ -34,21 +34,27 @@ export default function Todo() {
       <div className="flex justify-center mt-10 ">
         <h1 className=" flex flex-col justify-start items-start  ">
           {todos.map((data, index) => (
-            <h1 key={index} className="flex items-center space-x-2">
+            <h1 key={index} className="flex  space-x-4 ">
+              <div className="">
               <input
                 type="checkbox"
                 checked={checked === index}
                 onChange={() => setChecked(checked === index ? null : index)}
               />
+              </div>
+              <div>
               <span className={checked === index ? "line-through" : ""}>
                 {data}
               </span>
+              </div>
+              <div className="ml-80 flex justify-center ">
               <button
-                className="text-red-600 ml-10 font-bold bg-gray-300 p-2 rounded-full"
+                className="text-red-600 ml-10 font-bold bg-gray-300 p-2  rounded-full "
                 onClick={() => setTodos(todos.filter((_, i) => i !== index))}
               >
                 X
               </button>
+              </div>
             </h1>
           ))}
         </h1>
