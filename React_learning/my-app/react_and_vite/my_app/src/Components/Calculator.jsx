@@ -25,12 +25,10 @@ export default function Calculator() {
   return (
     <div className="px-16 pb-40 h-auto">
       <div className="rounded-2xl">
-        {/* DISPLAY */}
         <div className="bg-[#4A4A4A] rounded-t-2xl text-4xl font-bold h-20 flex items-center justify-end px-4 text-white">
           {display || "0"}
         </div>
 
-        {/* BUTTONS */}
         <div className="grid grid-cols-4 gap-2 mt-2">
           {calculatorData.map((row, rowIndex) =>
             row.map((btn, btnIndex) => (
