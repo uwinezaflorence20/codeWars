@@ -5,4 +5,8 @@ function findSubarray(arr) {
 
   let start = -1;
   let end = -1;
+    for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== sorted[i]) {
+    }
+}
 }
