@@ -11,4 +11,7 @@ function findSubarray(arr) {
       end = i;
     }
 }
+  if (start === -1) return [0,0];
+
+ 
 }
