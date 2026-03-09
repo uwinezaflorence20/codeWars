@@ -35,6 +35,8 @@ import Next from "./Components/Next";
 import FormHandlers from "./Components/FormHandlers";
 import FeedbackForm from "./Components/FeedbackForm";
 import FeedbackForm2 from "./Components/FeedbackForm2";
+import Useeffect from "./Components/Useeffect";
+import Counter from "./Components/Counter";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -251,6 +253,8 @@ function App() {
      <FormHandlers/>
      <FeedbackForm/>
      <FeedbackForm2/>
+     <Useeffect/>
+     <Counter/>
     </>
   );
 }
