@@ -33,6 +33,7 @@ import Todo from "./Components/Todo";
 import DarkMode from "./Components/DarkMode";
 import Next from "./Components/Next";
 import FormHandlers from "./Components/FormHandlers";
+import FeedbackForm from "./Components/FeedbackForm";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -247,6 +248,7 @@ function App() {
      <DarkMode/>
      <Next/>
      <FormHandlers/>
+     <FeedbackForm/>
     </>
   );
 }
