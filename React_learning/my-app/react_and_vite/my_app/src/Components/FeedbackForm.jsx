@@ -8,6 +8,7 @@ export default function FeedbackForm() {
   } else {
     // eslint-disable-next-line
     return (
+      <div className='mb-10'>
       <form className='text-black' onSubmit={e => {
         e.preventDefault();
         alert(`Sending: "${message}"`);
@@ -20,8 +21,9 @@ export default function FeedbackForm() {
           onChange={e => setMessage(e.target.value)}
         />
         <br />
-        <button type="submit">Send</button>
+        <button className='text-black bg-amber-700 mx-96 p-3 rounded' type="submit">Send</button>
       </form>
+      </div>
     );
   }
 }

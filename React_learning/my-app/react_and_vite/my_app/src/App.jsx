@@ -34,6 +34,7 @@ import DarkMode from "./Components/DarkMode";
 import Next from "./Components/Next";
 import FormHandlers from "./Components/FormHandlers";
 import FeedbackForm from "./Components/FeedbackForm";
+import FeedbackForm2 from "./Components/FeedbackForm2";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -249,6 +250,7 @@ function App() {
      <Next/>
      <FormHandlers/>
      <FeedbackForm/>
+     <FeedbackForm2/>
     </>
   );
 }

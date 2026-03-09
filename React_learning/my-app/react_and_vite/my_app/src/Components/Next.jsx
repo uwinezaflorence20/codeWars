@@ -19,7 +19,7 @@ export default function Next() {
   let sculpture = sculptureList[index];
   
   return (
-    <div className="text-black ">
+    <div className="text-black mb-10 ">
       <div className="flex flex-row gap-20">
         <button className="p-3 bg-red-300 rounded" onClick={handleClick}>
           next

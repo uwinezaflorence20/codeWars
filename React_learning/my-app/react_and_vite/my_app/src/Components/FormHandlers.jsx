@@ -17,6 +17,7 @@ export default function FormHandlers() {
   }
 
   return (
+    <div className="mb-10">
     <form onSubmit={(e) => e.preventDefault()} className="text-black">
       <input
         placeholder="First name"
@@ -31,7 +32,8 @@ export default function FormHandlers() {
       <h1>
         Hi, {firstName} {lastName}
       </h1>
-      <button onClick={handleReset}>Reset</button>
+      <button className="text-black bg-amber-700 mx-96 p-2 rounded" onClick={handleReset}>Reset</button>
     </form>
+    </div>
   );
 }
