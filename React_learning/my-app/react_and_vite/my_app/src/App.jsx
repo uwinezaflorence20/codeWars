@@ -32,6 +32,7 @@ import Fetching from "./Components/Fetching";
 import Todo from "./Components/Todo";
 import DarkMode from "./Components/DarkMode";
 import Next from "./Components/Next";
+import FormHandlers from "./Components/FormHandlers";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -245,6 +246,7 @@ function App() {
       <Todo/>
      <DarkMode/>
      <Next/>
+     <FormHandlers/>
     </>
   );
 }
