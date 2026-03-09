@@ -31,10 +31,6 @@ import MemeGenerator from "./Components/MemeGenerator";
 import Fetching from "./Components/Fetching";
 import Todo from "./Components/Todo";
 import DarkMode from "./Components/DarkMode";
-import Onchange from "./Components/Onchange";
-
-
-
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -247,7 +243,6 @@ function App() {
       <Fetching/>
       <Todo/>
      <DarkMode/>
-    <Onchange/>
     </>
   );
 }
