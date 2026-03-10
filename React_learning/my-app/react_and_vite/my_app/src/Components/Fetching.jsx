@@ -1,14 +1,20 @@
-import React from "react"
-export default function fetching(){
-  const [starWarsData, setStarWarsData] = React.useState(null)
-    fetch("https://swapi.dev/api/people/1")
-        .then(res => res.json())
-        .then(data => setStarWarsData(data))
-    
-    return (
-        <div className="
-        text-black">
-            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
-        </div>
-    )
+import React, { useEffect, useState } from "react";
+
+export default function fetching() {
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, []);
+  return (
+    <div className="text-black ">
+      <h1 className="font-bold text-2xl">The list of the names</h1>
+      <ul className="">
+        {user.map((da) => (
+          <li key={da.id}>{da.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
