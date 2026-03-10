@@ -253,9 +253,9 @@ function App() {
      <Next/>
      <FormHandlers/>
      <FeedbackForm/>
-     <FeedbackForm2/>
-     <Useeffect/>
-     <Counter/>
+     {/* <FeedbackForm2/> */}
+     {/* <Useeffect/>
+     <Counter/> */}
      <Fetch/>
     </>
   );
