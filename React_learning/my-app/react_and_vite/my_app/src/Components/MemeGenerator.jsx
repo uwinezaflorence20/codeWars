@@ -24,7 +24,8 @@ export default function MemeGenerator() {
             imageUrl: newMemeUrl
         }))
     }
-}
+
+
 
   function handleChange(event) {
     const { value, name } = event.currentTarget;
@@ -40,6 +41,7 @@ export default function MemeGenerator() {
       bottomText: value,
     }));
   }
+
 
   return (
     <main>
@@ -65,7 +67,7 @@ export default function MemeGenerator() {
             value={meme.bottomText}
           />
         </label>
-        <button onClick={} >Get a new meme image 🖼</button>
+        <button onClick={getMemeImage} >Get a new meme image 🖼</button>
       </div>
       <div className="meme">
         <img src={meme.imageUrl} />
@@ -73,5 +75,5 @@ export default function MemeGenerator() {
         <span className="bottom">{meme.bottomText}</span>
       </div>
     </main>
-  );
+    )
 }
