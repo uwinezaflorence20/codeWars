@@ -38,6 +38,7 @@ import FeedbackForm2 from "./Components/FeedbackForm2";
 import Useeffect from "./Components/Useeffect";
 import Counter from "./Components/Counter";
 import Fetch from "./Components/Fetch";
+import Show from "./Components/Show";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -257,6 +258,7 @@ function App() {
      {/* <Useeffect/>
      <Counter/> */}
      <Fetch/>
+     <Show/>
     </>
   );
 }
