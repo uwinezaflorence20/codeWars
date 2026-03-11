@@ -9,6 +9,7 @@ export default function MemeGenerator() {
   });
 
   const[allMemes, setAllMemes] = useState([]);
+
   useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")
     .then((data)=>data.json())
@@ -56,7 +57,7 @@ export default function MemeGenerator() {
             value={meme.bottomText}
           />
         </label>
-        <button >Get a new meme image 🖼</button>
+        <button onClick={} >Get a new meme image 🖼</button>
       </div>
       <div className="meme">
         <img src={meme.imageUrl} />
