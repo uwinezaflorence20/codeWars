@@ -5,4 +5,5 @@ if(s[i]%2===1){
     count += i+1;
 }
 }
+return count;
 };
