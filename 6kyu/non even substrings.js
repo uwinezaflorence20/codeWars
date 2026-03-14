@@ -1,6 +1,6 @@
 function solve(s){
 let count = 0;
-for(){
-    
+for(let i = 0; i < s.length; i++){
+
 }
 };
