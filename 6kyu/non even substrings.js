@@ -1,3 +1,6 @@
 function solve(s){
-  return 0;
+let count = 0;
+for(){
+    
+}
 };
