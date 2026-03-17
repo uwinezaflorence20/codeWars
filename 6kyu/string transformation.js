@@ -14,4 +14,5 @@ function stringTransformation(str,ops){
             str = result;
         }
     }
+    return str
 }
