@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Routes, Route } from "react-router-dom";
-
+import Basic from "./Components/Basic";
+import About from "./Components/About";
 function App() {
   return (
     <Routes>
-      <Route>
-        <h1>Hello world!</h1>
-      </Route>
+      <Route path="/" element={<Basic/>}/>
+      <Route path="/about" element={<About/>}/>
     </Routes>
   );
 }
