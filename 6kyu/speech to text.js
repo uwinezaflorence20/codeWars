@@ -1,6 +1,10 @@
-const bot =(input)=> {
- const nums = input.match(/\d+/g).map(Number);
- console.log(nums);
-
+const bot = {
+    message(prompt) {
+        return siri(prompt);
+    }
 };
+
+function siri(input) {
+
+}
 console.log(bot("Add 5 to 20."))
