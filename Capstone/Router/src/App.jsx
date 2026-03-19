@@ -1,18 +1,17 @@
 import React from "react";
 import './App.css'
-import ReactDOM from "react-dom/client";
 import { Routes, Route,Link, BrowserRouter } from "react-router-dom";
-import Basic from "./Components/Basic";
-import About from "./Components/About";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
 function App() {
   return (
     <BrowserRouter >
-    <Link  to="/" className="text-2xl mr-10 font-medium">Home</Link>
-    <Link to="/about" className="text-2xl font-medium">About</Link>
+    <Main>
     <Routes>
-      <Route path="/" element={<Basic/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/" element={<Home/>}/>
+       <Route path="about" element={<About/>}/>
     </Routes>
+    </Main>
     </BrowserRouter>
   );
 }
