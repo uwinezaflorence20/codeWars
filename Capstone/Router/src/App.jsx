@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
-import { Routes, Route, Link, BrowserRouter, NavLink } from "react-router-dom";
+// import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { createBrowserRouter,createRoutesFromElements,RouterProvider,Routes, Route, Link, NavLink } from "react-router-dom";
+
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 function App() {
   return (
-    <div className="bg-[#2B3452] h-screen text-white">
+    <div className="bg-[#2B3452] h-screen text-white ">
       <BrowserRouter>
         <header>
           <nav className="flex  justify-between">
