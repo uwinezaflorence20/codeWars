@@ -44,3 +44,6 @@ class SnakesLadders {
     if (die1 !== die2) {
       this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
     }
+      return message;
+  }
+}
