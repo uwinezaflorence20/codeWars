@@ -38,3 +38,9 @@ class SnakesLadders {
       this.gameOver = true;
       return `Player ${this.currentPlayer} Wins!`;
     }
+    let message = `Player ${this.currentPlayer} is on square ${pos}`;
+
+    // change player if not double
+    if (die1 !== die2) {
+      this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
+    }
