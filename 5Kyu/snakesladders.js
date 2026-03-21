@@ -13,3 +13,7 @@ class SnakesLadders {
       95: 75, 99: 80
     };
   }
+    play(die1, die2) {
+    if (this.gameOver) {
+      return "Game over!";
+    }
