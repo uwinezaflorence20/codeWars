@@ -26,3 +26,6 @@ class SnakesLadders {
       if (pos > 100) {
       pos = 100 - (pos - 100);
     }
+      if (this.board[pos]) {
+      pos = this.board[pos];
+    }
