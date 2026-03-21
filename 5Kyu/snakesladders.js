@@ -17,3 +17,9 @@ class SnakesLadders {
     if (this.gameOver) {
       return "Game over!";
     }
+
+    let move = die1 + die2;
+
+    let pos = this.currentPlayer === 1 ? this.player1 : this.player2;
+
+    pos += move;
