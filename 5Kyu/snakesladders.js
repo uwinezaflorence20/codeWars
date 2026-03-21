@@ -34,3 +34,7 @@ class SnakesLadders {
     } else {
       this.player2 = pos;
     }
+     if (pos === 100) {
+      this.gameOver = true;
+      return `Player ${this.currentPlayer} Wins!`;
+    }
