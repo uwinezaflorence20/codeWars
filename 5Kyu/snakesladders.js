@@ -29,3 +29,8 @@ class SnakesLadders {
       if (this.board[pos]) {
       pos = this.board[pos];
     }
+      if (this.currentPlayer === 1) {
+      this.player1 = pos;
+    } else {
+      this.player2 = pos;
+    }
