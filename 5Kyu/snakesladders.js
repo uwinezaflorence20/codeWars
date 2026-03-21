@@ -23,3 +23,6 @@ class SnakesLadders {
     let pos = this.currentPlayer === 1 ? this.player1 : this.player2;
 
     pos += move;
+      if (pos > 100) {
+      pos = 100 - (pos - 100);
+    }
