@@ -6,6 +6,8 @@ import About from "./Pages/About";
 import Mental from "./Pages/Mental";
 import Book from "./Pages/Book";
 import BookList from "./Pages/BookList"
+import NewBooks from "./Pages/NewBooks";
+import NotFound from "./Pages/NotFound";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -54,6 +56,8 @@ function App() {
             <Route path ="/mental" element={<Mental/>}/>
             <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
+             <Route path ="/book/new" element={<NewBooks/>}/>
+             <Route path = "*" element={<NotFound/>} />
           </Routes>
         </main>
       </BrowserRouter>
