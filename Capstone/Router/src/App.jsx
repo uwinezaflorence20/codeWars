@@ -4,7 +4,8 @@ import {BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Mental from "./Pages/Mental";
-import Books from "./Pages/BookList";
+import Book from "./Pages/Book";
+import BookList from "./Pages/BookList"
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -37,7 +38,7 @@ function App() {
                 Mental Answer
               </NavLink>
                <NavLink
-                to="books"
+                to="book"
                 className=" bg-orange-500 px-6 py-4 hover:bg-amber-500"
               >
                 {" "}
@@ -51,6 +52,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path ="/mental" element={<Mental/>}/>
+            <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
           </Routes>
         </main>
