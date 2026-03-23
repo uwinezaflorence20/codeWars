@@ -1,10 +1,9 @@
 import React from "react";
 import "./App.css";
-// import { Routes, Route, Link, NavLink } from "react-router-dom";
-import { createBrowserRouter,createRoutesFromElements,RouterProvider,Routes, Route, Link, NavLink } from "react-router-dom";
-
+import {BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
+import Mental from "./Pages/Mental";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -29,6 +28,13 @@ function App() {
                 {" "}
                 About
               </NavLink>
+              <NavLink
+                to="mental"
+                className=" bg-orange-500 px-6 py-4 hover:bg-amber-500"
+              >
+                {" "}
+                Mental Answer
+              </NavLink>
             </div>
           </nav>
         </header>
@@ -36,6 +42,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path ="mental" element={<Mental/>}/>
           </Routes>
         </main>
       </BrowserRouter>
