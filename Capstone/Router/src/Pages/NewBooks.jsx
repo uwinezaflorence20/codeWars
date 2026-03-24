@@ -2,6 +2,6 @@
 
 let NewBooks = ()=>{
 
-    return <h1>New Books</h1>
+    return <h1 className="text-4xl">New Books</h1>
 }
 export default NewBooks;

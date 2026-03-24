@@ -8,6 +8,7 @@ import Book from "./Pages/Book";
 import BookList from "./Pages/BookList"
 import NewBooks from "./Pages/NewBooks";
 import NotFound from "./Pages/NotFound";
+import BookLayout from "./Pages/BookLayout";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -57,7 +58,7 @@ function App() {
             {/* <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
              <Route path ="/book/new" element={<NewBooks/>}/> */}
-             <Route path="/book">
+             <Route path="/book" element={<BookLayout/>}>
              <Route index element={<BookList/>}/>
              <Route path=":id" element={<Book/>}/>
              <Route path=":new" element={<NewBooks/>}/>
