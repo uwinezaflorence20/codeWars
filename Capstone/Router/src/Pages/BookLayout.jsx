@@ -7,7 +7,7 @@ let BookLayout = () => {
       <Link to="/book/2">Book 2</Link>
       <br />
       <Link to="/book/new">New Books</Link>
-      <Outlet/>
+      <Outlet context={{hello:"world"}}/>
     </div>
   );
 };
