@@ -15,7 +15,7 @@ function App() {
         <header>
           <nav className="flex  justify-between">
             <div>
-              <h1 className="text-3xl font bold ">Jobarouter</h1>
+          <NavLink to="/"><h1 className="text-3xl font bold ">Jobarouter</h1></NavLink>  
               <hr className=" w-32 p-2 text-orange-500 font-bold " />
             </div>
             <div className="flex  gap-4">
@@ -54,9 +54,14 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path ="/mental" element={<Mental/>}/>
-            <Route path ="book" element ={<BookList/>}/>
+            {/* <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
-             <Route path ="/book/new" element={<NewBooks/>}/>
+             <Route path ="/book/new" element={<NewBooks/>}/> */}
+             <Route path="/book">
+             <Route index element={<BookList/>}/>
+             <Route path=":id" element={<Book/>}/>
+             <Route path=":new" element={<NewBooks/>}/>
+             </Route>
              <Route path = "*" element={<NotFound/>} />
           </Routes>
         </main>
