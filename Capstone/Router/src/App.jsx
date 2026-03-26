@@ -4,15 +4,16 @@ import {BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Mental from "./Pages/Mental";
-import Book from "./Pages/Book";
-import BookList from "./Pages/BookList"
-import NewBooks from "./Pages/NewBooks";
 import NotFound from "./Pages/NotFound";
 import BookLayout from "./Pages/BookLayout";
+import BookRoutes from "./Pages/BookRoutes";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
       <BrowserRouter>
+      {/* <Routes>
+         <Route path="/book" element ={<h1>Extra Content</h1>}/>
+      </Routes> */}
         <header>
           <nav className="flex  justify-between">
             <div>
@@ -58,11 +59,7 @@ function App() {
             {/* <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
              <Route path ="/book/new" element={<NewBooks/>}/> */}
-             <Route path="/book" element={<BookLayout/>}>
-             <Route index element={<BookList/>}/>
-             <Route path=":id" element={<Book/>}/>
-             <Route path=":new" element={<NewBooks/>}/>
-             </Route>
+             <Route path="/book/*" element={<BookRoutes/>}/>
              <Route path = "*" element={<NotFound/>} />
           </Routes>
         </main>
