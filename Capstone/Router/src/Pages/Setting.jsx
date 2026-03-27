@@ -1,2 +1,2 @@
-const Setting = () => <h2>Dashboard Page</h2>;
+const Setting = () => <h2>Setting Page</h2>;
 export default Setting;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import {BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Mental from "./Pages/Mental";
@@ -16,13 +16,15 @@ function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
       <BrowserRouter>
-      {/* <Routes>
+        {/* <Routes>
          <Route path="/book" element ={<h1>Extra Content</h1>}/>
       </Routes> */}
         <header>
           <nav className="flex  justify-between">
             <div>
-          <NavLink to="/"><h1 className="text-3xl font bold ">Jobarouter</h1></NavLink>  
+              <NavLink to="/">
+                <h1 className="text-3xl font bold ">Jobarouter</h1>
+              </NavLink>
               <hr className=" w-32 p-2 text-orange-500 font-bold " />
             </div>
             <div className="flex  gap-4">
@@ -46,12 +48,19 @@ function App() {
                 {" "}
                 Mental Answer
               </NavLink>
-               <NavLink
+              <NavLink
                 to="book"
                 className=" bg-orange-500 px-6 py-4 hover:bg-amber-500"
               >
                 {" "}
                 Books
+              </NavLink>
+               <NavLink
+                to="side"
+                className=" bg-orange-500 px-6 py-4 hover:bg-amber-500"
+              >
+                {" "}
+                SideBar
               </NavLink>
             </div>
           </nav>
@@ -60,22 +69,21 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path ="/mental" element={<Mental/>}/>
-          
+            <Route path="/mental" element={<Mental />} />
+
             {/* <Route path ="book" element ={<BookList/>}/>
             <Route path ="/book/:id" element={<Book/>}/>
              <Route path ="/book/new" element={<NewBooks/>}/> */}
-             <Route path="/book/*" element={<BookRoutes/>}/>
-             <Route path = "*" element={<NotFound/>} />
+            <Route path="/book/*" element={<BookRoutes />} />
+
+            <Route path="/side" element={<Layout />}>
+              <Route index element={<Dashboard />} />
+              <Route path="user" element={<Users />} />
+              <Route path="setting" element={<Setting />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <Routes>
-        <Route path="side" element={<Layout/>}>
-          <Route index element={<Dashboard />} />
-          <Route path="users" element={<Users />} />
-          <Route path="settings" element={<Setting />} />
-        </Route>
-      </Routes>
       </BrowserRouter>
     </div>
   );
