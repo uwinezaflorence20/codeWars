@@ -1,17 +1,55 @@
 import { Link, Outlet } from "react-router-dom";
-const Layout =()=>{
-      return(
-        <div className="flex h-screen">
-            <div className="bg-blue-300 w-[30%] flex flex-col">
-               <Link to="" className="p-4  font-bold text-xl rounded-y-2xl">Dashboard</Link>
-               <Link to="user" className="p-4  font-bold text-xl rounded-y-2xl">Users</Link>
-               <Link to="setting" className="p-4  font-bold text-xl rounded-y-2xl">setting</Link>
-            </div>
-            <div className="bg-red-500 w-[70%]">
-              <Outlet/>
-            </div>
-        </div>
-
-    )
-}
+const Layout = () => {
+  return (
+    <div className="flex h-screen">
+      <div className="bg-[#061626] w-[20%] flex flex-col">
+        <Link
+          to=""
+          className=" bg-[#61C3CE]  p-4  font-bold text-xl rounded-e-3xl"
+        >
+          Dashboard
+        </Link>
+        <Link
+          to="user"
+          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
+        >
+          Users
+        </Link>
+        <Link
+          to="project"
+          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
+        >
+          Project
+        </Link>
+        <Link
+          to="calendar"
+          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
+        >
+         Calendar
+        </Link>
+        <Link
+          to="tasks"
+          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
+        >
+          Tasks
+        </Link>
+        <Link
+          to="reporting"
+          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
+        >
+          Reporting
+        </Link>
+        <Link to="setting" className="p-4  font-bold text-xl rounded-y-2xl">
+          setting
+        </Link>
+          <Link to="help" className="p-4  font-bold text-xl rounded-y-2xl">
+          Help
+        </Link>
+      </div>
+      <div className="bg-red-500 w-[70%]">
+        <Outlet />
+      </div>
+    </div>
+  );
+};
 export default Layout;
