@@ -16,6 +16,7 @@ import Help from "./Pages/Help";
 import Projects from "./Pages/Projects";
 import Calendars from "./Pages/Calendars";
 import Tasks from "./Pages/Tasks";
+import Reporting from "./Pages/Reportings";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -88,7 +89,7 @@ function App() {
               <Route path="project" element={<Projects />} />
               <Route path="calendars" element={<Calendars />} />
               <Route path="tasks" element={<Tasks />} />
-              <Route path="reporting" element={<Report />} />
+              <Route path="reporting" element={<Reporting/>} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

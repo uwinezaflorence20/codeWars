@@ -22,7 +22,7 @@ const Layout = () => {
           Project
         </Link>
         <Link
-          to="calendar"
+          to="calendars"
           className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
         >
          Calendar
@@ -46,7 +46,7 @@ const Layout = () => {
           Help
         </Link>
       </div>
-      <div className="bg-red-500 w-[70%]">
+      <div className="bg-red-500 w-[80%]">
         <Outlet />
       </div>
     </div>

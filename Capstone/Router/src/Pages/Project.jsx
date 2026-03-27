@@ -1,2 +1,2 @@
-const Project = () => <h2>Users Page</h2>;
+const Project = () => <h2>Project Page</h2>;
 export default Project;

@@ -1,2 +1,2 @@
-const Reporting = () => <h2>Setting Page</h2>;
+const Reporting = () => <h2>SReport Page</h2>;
 export default Reporting;

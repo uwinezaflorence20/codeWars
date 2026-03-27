@@ -1,2 +1,8 @@
-const Calendars = () => <h2>Setting Page</h2>;
+const Calendars = () => {
+    return(
+        <div className="">
+<h2>Calendars Page</h2>
+</div>
+    )
+}
 export default Calendars;

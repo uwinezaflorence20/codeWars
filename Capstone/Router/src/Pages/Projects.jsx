@@ -1,2 +1,2 @@
-const Projects = () => <h2>Setting Page</h2>;
+const Projects = () => <h2>Projects Page</h2>;
 export default Projects;
