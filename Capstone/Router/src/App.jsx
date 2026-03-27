@@ -11,7 +11,11 @@ import SideBar from "./Pages/SideBar";
 import Users from "./Pages/Users";
 import Dashboard from "./Pages/Dashboard";
 import Setting from "./Pages/Setting";
-import Layout from "./Layout";
+import Layout from "./Pages/Layout";
+import Help from "./Pages/Help";
+import Projects from "./Pages/Projects";
+import Calendars from "./Pages/Calendars";
+import Tasks from "./Pages/Tasks";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -55,7 +59,7 @@ function App() {
                 {" "}
                 Books
               </NavLink>
-               <NavLink
+              <NavLink
                 to="side"
                 className=" bg-orange-500 px-6 py-4 hover:bg-amber-500"
               >
@@ -80,6 +84,11 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="user" element={<Users />} />
               <Route path="setting" element={<Setting />} />
+              <Route path="help" element={<Help />} />
+              <Route path="project" element={<Projects />} />
+              <Route path="calendars" element={<Calendars />} />
+              <Route path="tasks" element={<Tasks />} />
+              <Route path="reporting" element={<Report />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
