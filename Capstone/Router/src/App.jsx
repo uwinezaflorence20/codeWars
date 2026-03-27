@@ -8,6 +8,10 @@ import NotFound from "./Pages/NotFound";
 import BookLayout from "./Pages/BookLayout";
 import BookRoutes from "./Pages/BookRoutes";
 import SideBar from "./Pages/SideBar";
+import Users from "./Pages/Users";
+import Dashboard from "./Pages/Dashboard";
+import Setting from "./Pages/Setting";
+import Layout from "./Layout";
 function App() {
   return (
     <div className="bg-[#2B3452] h-screen text-white ">
@@ -66,10 +70,10 @@ function App() {
           </Routes>
         </main>
         <Routes>
-        <Route path="side" element={<SideBar />}>
+        <Route path="side" element={<Layout/>}>
           <Route index element={<Dashboard />} />
           <Route path="users" element={<Users />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="settings" element={<Setting />} />
         </Route>
       </Routes>
       </BrowserRouter>
