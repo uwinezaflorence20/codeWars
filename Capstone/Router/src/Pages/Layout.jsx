@@ -46,7 +46,7 @@ const Layout = () => {
           Help
         </Link>
       </div>
-      <div className="bg-red-500 w-[80%]">
+      <div className="bg-white text-black w-[80%]">
         <Outlet />
       </div>
     </div>
