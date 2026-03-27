@@ -14,6 +14,7 @@ return(
                     <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ullam temporibus libero ipsam enim sint eos possimus f
             ugiat necessitatibus accusamus! Deserunt cumque aut eos impedit magni evenie
             t ipsa excepturi ipsum!</p>
+            
 
     </div>
 )
