@@ -12,3 +12,5 @@ const findSecretMessage = paragraph => {
 
     for (const word of words) {
         if (seen.has(word) && !duplicates.has(word)) {
+              result.push(word);
+            duplicates.add(word);
