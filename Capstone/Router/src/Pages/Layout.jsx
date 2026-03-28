@@ -1,20 +1,22 @@
 import { Link, Outlet } from "react-router-dom";
+import { RxDashboard } from "react-icons/rx";
+import { FaUser } from "react-icons/fa";
 const Layout = () => {
   return (
     <div className="flex h-screen">
       <div className="bg-[#061626] w-[20%] flex flex-col">
-        <Link
-          to=""
-          className=" bg-[#61C3CE]  p-4  font-bold text-xl rounded-e-3xl"
-        >
-          Dashboard
-        </Link>
-        <Link
-          to="user"
-          className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
-        >
-          Users
-        </Link>
+        <div className=" bg-[#61C3CE] flex gap-4  p-4  font-bold text-xl rounded-e-3xl">
+          <RxDashboard className="mt-1" />
+          <Link to="">Dashboard</Link>
+        </div>
+        <div className=" hover:bg-[#61C3CE] flex gap-4  p-4  font-bold text-xl hover:rounded-e-3xl">
+          <FaUser className="mt-1" />
+          <Link
+            to="user"
+          >
+            Users
+          </Link>
+        </div>
         <Link
           to="project"
           className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
@@ -25,7 +27,7 @@ const Layout = () => {
           to="calendars"
           className="hover:bg-[#61C3CE] hover:rounded-e-3xl p-4  font-bold text-xl rounded-y-2xl"
         >
-         Calendar
+          Calendar
         </Link>
         <Link
           to="tasks"
@@ -42,7 +44,7 @@ const Layout = () => {
         <Link to="setting" className="p-4  font-bold text-xl rounded-y-2xl">
           setting
         </Link>
-          <Link to="help" className="p-4  font-bold text-xl rounded-y-2xl">
+        <Link to="help" className="p-4  font-bold text-xl rounded-y-2xl">
           Help
         </Link>
       </div>
