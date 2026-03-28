@@ -7,3 +7,8 @@ const findSecretMessage = paragraph => {
         
     const seen = new Set();
     const duplicates = new Set();
+
+     const result = [];
+
+    for (const word of words) {
+        if (seen.has(word) && !duplicates.has(word)) {
