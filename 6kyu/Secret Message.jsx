@@ -14,3 +14,9 @@ const findSecretMessage = paragraph => {
         if (seen.has(word) && !duplicates.has(word)) {
               result.push(word);
             duplicates.add(word);
+            }
+        seen.add(word);
+    }
+
+    return result.join(" ");
+};
