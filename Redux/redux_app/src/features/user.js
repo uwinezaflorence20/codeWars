@@ -1,7 +1,6 @@
-import React from 'react'
+
 import { createSlice } from '@reduxjs/toolkit'
-import Login from '../components/Login'
-const userSlice = createSlice(
+export const userSlice = createSlice(
     {
         name: "User",
         initialState: { value: { name: "", age: 0, email: "" } },
@@ -11,3 +10,4 @@ const userSlice = createSlice(
             },
         }
     })
+export default userSlice.reducer;
