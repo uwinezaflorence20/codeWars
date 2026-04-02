@@ -10,3 +10,5 @@ const f = () => {
 f=()=>['t','i','n','y'].join``
 console.log(f())
 // third
+f=_=>String.fromCharCode(116,105,110,121)
+console.log(f())
