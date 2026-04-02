@@ -5,3 +5,8 @@ const f = () => {
     let Y = 121;
     return String.fromCharCode(T, I, N, Y);
 }
+
+// second
+f=()=>['t','i','n','y'].join``
+console.log(f())
+// third
