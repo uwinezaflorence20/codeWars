@@ -9,3 +9,8 @@ function decompose(n) {
       const decimals = n.split(".")[1].length;
       den = BigInt(10 ** decimals);
       num = BigInt(n.replace(".", ""));
+      } else {
+      num = BigInt(n);
+      den = 1n;
+    }
+  } else {
