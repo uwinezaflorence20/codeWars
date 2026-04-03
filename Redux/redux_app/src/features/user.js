@@ -16,4 +16,5 @@ state.value ={name:"",age:0,email:""}
 });
 
 export const { login } = userSlice.actions;
+export const {logout} = userSlice.actions;
 export default userSlice.reducer;
