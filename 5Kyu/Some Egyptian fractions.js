@@ -23,3 +23,43 @@ function decompose(n) {
       den = 1n;
     }
   }
+   const gcd = (a, b) => b === 0n ? a : gcd(b, a % b);
+  const reduce = (n, d) => {
+    const g = gcd(n < 0n ? -n : n, d < 0n ? -d : d);
+    return [n / g, d / g];
+  };
+  
+  [num, den] = reduce(num, den);
+  
+  if (num === 0n) return [];
+  
+  const result = [];
+  
+  while (num > 0n) {
+    if (den === 1n) {
+      result.push(`${num}`);
+      break;
+    }
+    
+    if (num === 1n) {
+      result.push(`1/${den}`);
+      break;
+    }
+    
+    if (den % num === 0n) {
+      const newDen = den / num;
+      result.push(newDen === 1n ? `${num}` : `1/${newDen}`);
+      break;
+    }
+    
+    const ceilDen = (den + num - 1n) / num;
+    result.push(`1/${ceilDen}`);
+    
+    const newNum = num * ceilDen - den;
+    const newDen = den * ceilDen;
+    
+    [num, den] = reduce(newNum, newDen);
+  }
+  
+  return result;
+}
