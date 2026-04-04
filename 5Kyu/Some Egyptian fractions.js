@@ -12,5 +12,4 @@ function decompose(n) {
       } else {
       num = BigInt(n);
       den = 1n;
-    }
-  } else {
+    }}}
