@@ -12,4 +12,14 @@ function decompose(n) {
       } else {
       num = BigInt(n);
       den = 1n;
-    }}}
+      }} else {
+    const str = n.toString();
+    if (str.includes(".")) {
+      const decimals = str.split(".")[1].length;
+      den = BigInt(10 ** decimals);
+      num = BigInt(str.replace(".", ""));
+    } else {
+      num = BigInt(n);
+      den = 1n;
+    }
+  }
