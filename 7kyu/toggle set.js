@@ -21,3 +21,7 @@ const setMultipleBits = (n, mask) => {
 const clearMultipleBits = (n, mask) => {
   return n & ~mask;
 };
+
+const toggleMultipleBits = (n, mask) => {
+  return n ^ mask;
+};
