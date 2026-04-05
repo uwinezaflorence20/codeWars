@@ -13,3 +13,11 @@ const clearBit = (n, position) => {
 const isBitSet = (n, position) => {
   return (n & (1 << position)) !== 0;
 };
+
+const setMultipleBits = (n, mask) => {
+  return n | mask;
+};
+
+const clearMultipleBits = (n, mask) => {
+  return n & ~mask;
+};
