@@ -39,6 +39,7 @@ import Useeffect from "./Components/Useeffect";
 import Counter from "./Components/Counter";
 import Fetch from "./Components/Fetch";
 import Show from "./Components/Show";
+import UserCard from "./Components/UserCard";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -259,6 +260,18 @@ function App() {
      <Counter/> */}
      <Fetch/>
      <Show/>
+           <UserCard
+       name="Alice"
+       age={25}
+       isAdmin={true}
+       hobbies={['coding','hiking']}
+       />
+          <UserCard
+       name="Florence"
+       age={24}
+       isAdmin={false}
+       hobbies={['coding','hiking']}
+       />
     </>
   );
 }

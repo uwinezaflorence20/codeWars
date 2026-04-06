@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Child({name,age,isAdmin,hobbies}) {
+function UserCard({name,isAdmin,hobbies,age}) {
   return (
-    <div>
+   <div className='text-black'>
       <h2> {name} {isAdmin && '(Admin)'}</h2>
       <p>Age:{age}</p>
       <ul>
@@ -14,4 +14,4 @@ function Child({name,age,isAdmin,hobbies}) {
   )
 }
 
-export default Child
+export default UserCard
