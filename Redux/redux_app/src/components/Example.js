@@ -5,7 +5,7 @@ export const Parent =()=>{
     const [userName,setUserName] = useState("PedroTech");
     return(
         <AppContex.Provider value={{userName,setUserName}}>
-            <div>
+            <div className="mt-20">
                 {userName}
                 <Child/>
             </div>
