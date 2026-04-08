@@ -16,7 +16,8 @@ export const Parent =()=>{
 export const Child = ()=>{
     return <Grandchild />
 }
-export const Grandchild = ({setUserName})=>{
+export const Grandchild = ()=>{
+    const {setUserName} = useContext(AppContex);
     return(
         <div>
 <button onClick={()=>{
