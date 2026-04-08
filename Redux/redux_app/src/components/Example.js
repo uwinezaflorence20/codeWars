@@ -1,4 +1,4 @@
-import react,{useState,createContext} from "react"
+import react,{useState,createContext,useContext} from "react"
 const AppContex = createContext(null);// default value
 
 export const Parent =()=>{
@@ -13,13 +13,18 @@ export const Parent =()=>{
     );
 };
 
-export const Child = ({setUserName})=>{
-    return <Grandchild setUserName={setUserName}/>
+export const Child = ()=>{
+    return <Grandchild />
 }
 export const Grandchild = ({setUserName})=>{
     return(
         <div>
-
+<button onClick={()=>{
+    setUserName("PedroTechnologies");
+}}
+>
+Change userName
+</button>
         </div>
     )
 }
