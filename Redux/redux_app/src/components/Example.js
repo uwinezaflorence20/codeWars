@@ -1,4 +1,4 @@
-import react,{useState,createContext,useContext} from "react"
+import {useState,createContext,useContext} from "react"
 const AppContex = createContext(null);// default value
 
 export const Parent =()=>{
