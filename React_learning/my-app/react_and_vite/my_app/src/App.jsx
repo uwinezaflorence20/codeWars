@@ -40,6 +40,7 @@ import Counter from "./Components/Counter";
 import Fetch from "./Components/Fetch";
 import Show from "./Components/Show";
 import UserCard from "./Components/UserCard";
+import ProductList from "./Components/ProductList";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -272,6 +273,7 @@ function App() {
        isAdmin={false}
        hobbies={['coding','hiking']}
        />
+       <ProductList/>
     </>
   );
 }
