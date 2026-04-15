@@ -42,6 +42,8 @@ import Show from "./Components/Show";
 import UserCard from "./Components/UserCard";
 import ProductList from "./Components/ProductList";
 import UserProfileDemo from "./Components/UserProfileDemo";
+import TouchTypingApp from "./Components/TouchTypingApp";
+import NameTransferLists from "./Components/NameTransferLists";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -101,7 +103,8 @@ function App() {
     <>
      <ProductList/>
      <UserProfileDemo/>
-     {/* <TouchTyping/> */}
+     <TouchTypingApp/> 
+     <NameTransferLists/>
       <div className
       ="grid grid-cols-2">{theChallenge}</div>
 
