@@ -11,9 +11,7 @@ const TouchTypingApp = () => {
   const isCorrect =
     userInput === sentence.slice(0, userInput.length);
 
-  const isWrong =
-    userInput.length > 0 &&
-    userInput !== sentence.slice(0, userInput.length);
+  const isWrong =userInput.length > 0 &&userInput !== sentence.slice(0, userInput.length);
 
   // =========================
   // HANDLE INPUT CHANGE
