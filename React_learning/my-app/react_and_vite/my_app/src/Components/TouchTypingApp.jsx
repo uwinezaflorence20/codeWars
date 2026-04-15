@@ -3,27 +3,17 @@ import { useState } from "react";
 const TouchTypingApp = () => {
   const sentence =
     "The quick brown fox jumps over the lazy dog.";
-
   const [userInput, setUserInput] = useState("");
   const [isCompleted, setIsCompleted] = useState(false);
 
-  // ✅ Check correctness in real-time
-  const isCorrect =
-    userInput === sentence.slice(0, userInput.length);
+  const isCorrect = userInput === sentence.slice(0, userInput.length);
 
-  const isWrong =userInput.length > 0 &&userInput !== sentence.slice(0, userInput.length);
+  const isWrong =userInput.length > 0  &&  userInput !== sentence.slice(0, userInput.length);
 
-  // =========================
-  // HANDLE INPUT CHANGE
-  // =========================
   const handleInputChange = (e) => {
     const value = e.target.value;
-
-    // prevent extra typing
     if (value.length <= sentence.length) {
       setUserInput(value);
-
-      // check completion
       if (value === sentence) {
         setIsCompleted(true);
       } else {
@@ -31,10 +21,6 @@ const TouchTypingApp = () => {
       }
     }
   };
-
-  // =========================
-  // RESET APP
-  // =========================
   const resetApp = () => {
     setUserInput("");
     setIsCompleted(false);
@@ -45,8 +31,6 @@ const TouchTypingApp = () => {
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
         Touch Typing App
       </h1>
-
-      {/* TARGET SENTENCE */}
       <div className="mb-6 p-4 bg-gray-100 rounded-lg">
         <p className="text-lg font-mono text-gray-700">
           {sentence.split("").map((char, index) => (

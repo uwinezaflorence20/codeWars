@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
 
-/* =========================
-   CUSTOM HOOK
-========================= */
 const useGetUserById = (userId) => {
   const [user, setUser] = useState(null);
   const [posts, setPosts] = useState([]);
@@ -14,7 +11,6 @@ const useGetUserById = (userId) => {
       try {
         setLoading(true);
         setError(null);
-
         // Fetch user
         const userRes = await fetch(
           `https://jsonplaceholder.typicode.com/users/${userId}`
