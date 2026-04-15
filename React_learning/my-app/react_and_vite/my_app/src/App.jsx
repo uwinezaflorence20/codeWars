@@ -41,6 +41,7 @@ import Fetch from "./Components/Fetch";
 import Show from "./Components/Show";
 import UserCard from "./Components/UserCard";
 import ProductList from "./Components/ProductList";
+import UserProfileDemo from "./Components/UserProfileDemo";
 function App() {
   let firstName = "Uwineza";
   let secondName = "Florence";
@@ -98,7 +99,11 @@ function App() {
 
   return (
     <>
-      <div className="grid grid-cols-2">{theChallenge}</div>
+     <ProductList/>
+     <UserProfileDemo/>
+     {/* <TouchTyping/> */}
+      <div className
+      ="grid grid-cols-2">{theChallenge}</div>
 
       <div className="grid grid-cols-3">{person}</div>
       <h1> Maps</h1>
@@ -273,7 +278,7 @@ function App() {
        isAdmin={false}
        hobbies={['coding','hiking']}
        />
-       <ProductList/>
+      
     </>
   );
 }
