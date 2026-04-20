@@ -19,6 +19,11 @@ export const Child1 = () =>{
 };
 
 export const Child3 = () =>{
+   const {count} = useContext(AppContext);
+    return <h1>{count}</h1>;
+};
+
+export const Child4 = () =>{
    const {setCount} = useContext(AppContext);
    return(
     <div>
