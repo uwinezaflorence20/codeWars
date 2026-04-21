@@ -6,7 +6,7 @@ const[count,setCount] = useState(0);
   return (
     <AppContext.Provider value={{userName,setUserName,count,setCount}}>
         <Child1/>
-        <Child2/>
+        {/* <Child2/> */}
         <Child3/>
         <Child4/>
     </AppContext.Provider>
