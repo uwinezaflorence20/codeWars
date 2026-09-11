@@ -1,0 +1,53 @@
+function maxGems(costs, budget) {
+  let left = 0;
+  let right = costs.length - 1;
+  let count = 0;
+
+  while (left <= right) {
+    const mid = left + ((right - left) >> 1);
+    const pivot = costs[mid];
+
+    let lt = left;
+    let i = left;
+    let gt = right;
+    let smallerSum = 0;
+
+    while (i <= gt) {
+      const value = costs[i];
+
+      if (value < pivot) {
+        smallerSum += value;
+        [costs[lt], costs[i]] = [costs[i], costs[lt]];
+        lt++;
+        i++;
+      } else if (value > pivot) {
+        [costs[i], costs[gt]] = [costs[gt], costs[i]];
+        gt--;
+      } else {
+        i++;
+      }
+    }
+
+    if (smallerSum > budget) {
+      right = lt - 1;
+      continue;
+    }
+
+    count += lt - left;
+    budget -= smallerSum;
+
+    const equalCount = gt - lt + 1;
+    const canBuy = Math.min(equalCount, Math.floor(budget / pivot));
+
+    count += canBuy;
+    budget -= canBuy * pivot;
+
+    if (canBuy < equalCount) {
+      return count;
+    }
+
+    left = gt + 1;
+  }
+
+  return count;
+}

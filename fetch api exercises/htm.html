@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planet Thumbnails from JSON</title>
+  <style>
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Planet Thumbnails</h1>
+
+  <script>
+    // Step 1: Fetch the JSON file
+    fetch('/fetch api exercises/planets.json')
+      .then(response => response.json()) // parse JSON
+      .then(data => {
+        const planetUrls = data.results; // array of URLs
+
+        // Step 2: Loop through each URL and create a thumbnail
+        planetUrls.forEach(url => {
+          // Simulate fetching each URL (here we just use the URL directly)
+          createPlanetThumb(url);
+        });
+      })
+      .catch(error => console.error("Error loading JSON:", error));
+
+    // Function to create a thumbnail
+    function createPlanetThumb(url) {
+      const img = document.createElement("img");
+      img.src = url;             // set image source
+      img.className = "thumbnail"; // apply CSS styling
+      document.body.appendChild(img); // add to page
+    }
+  </script>
+</body>
+</html>
